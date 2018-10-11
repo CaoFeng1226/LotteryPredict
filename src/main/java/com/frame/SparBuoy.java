@@ -14,32 +14,32 @@ import com.allpanel.Epanel;
 import com.allpanel.Fpanel;
 import com.allpanel.Gpanel;
 
-public class SparBuoy extends JDialog {// ºÅÂë×ßÊÆ¶Ô»°¿ò
-	JTabbedPane tp = new JTabbedPane();// ´´½¨Ñ¡Ïî¿¨Ãæ°å
-	public SparBuoy() {// ºÅÂë×ßÊÆ¶Ô»°¿òµÄ¹¹Ôì·½·¨
-		setTitle("ºÅÂë×ßÊÆ");// ÉèÖÃºÅÂë×ßÊÆ¶Ô»°¿òµÄ±êÌâ
-		setResizable(false);// ²»¿É¸Ä±äºÅÂë×ßÊÆ¶Ô»°¿òµÄ´óĞ¡
-		setIconImage(Toolkit.getDefaultToolkit().getImage(SparBuoy.class.getResource("/imgs/log.png")));// ÉèÖÃºÅÂë×ßÊÆ¶Ô»°¿òµÄ´°ÌåÍ¼±ê
-		// °ÑÏÔÊ¾µÚÒ»Î»~µÚÆßÎ»¿ª½±ºÅÂëµÄ×ßÊÆÃæ°åÌí¼Óµ½Ñ¡Ïî¿¨Ãæ°åÖĞ
-		tp.add("µÚÒ»Î»",new Apanel());
-		tp.add("µÚ¶şÎ»",new Bpanel());
-		tp.add("µÚÈıÎ»",new Cpanel());
-		tp.add("µÚËÄÎ»",new Dpanel());
-		tp.add("µÚÎåÎ»",new Epanel());
-		tp.add("µÚÁùÎ»",new Fpanel());
-		tp.add("µÚÆßÎ»",new Gpanel());
-		this.getContentPane().add(tp);// °ÑÑ¡Ïî¿¨Ãæ°åÌí¼Óµ½ºÅÂë×ßÊÆ¶Ô»°¿òµÄÄÚÈİÃæ°åÖĞ
-		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);// ÕâÊÇºÅÂë×ßÊÆ¶Ô»°¿òµÄ¹Ø±Õ·½Ê½
-		this.setBounds(450, 100, 563, 593);// ÉèÖÃºÅÂë×ßÊÆ¶Ô»°¿òµÄÎ»ÖÃºÍ¿í¸ß
+public class SparBuoy extends JDialog {// å·ç èµ°åŠ¿å¯¹è¯æ¡†
+	JTabbedPane tp = new JTabbedPane();// åˆ›å»ºé€‰é¡¹å¡é¢æ¿
+	public SparBuoy() {// å·ç èµ°åŠ¿å¯¹è¯æ¡†çš„æ„é€ æ–¹æ³•
+		setTitle("å·ç èµ°åŠ¿");// è®¾ç½®å·ç èµ°åŠ¿å¯¹è¯æ¡†çš„æ ‡é¢˜
+		setResizable(false);// ä¸å¯æ”¹å˜å·ç èµ°åŠ¿å¯¹è¯æ¡†çš„å¤§å°
+		setIconImage(Toolkit.getDefaultToolkit().getImage(SparBuoy.class.getResource("/imgs/log.png")));// è®¾ç½®å·ç èµ°åŠ¿å¯¹è¯æ¡†çš„çª—ä½“å›¾æ ‡
+		// æŠŠæ˜¾ç¤ºç¬¬ä¸€ä½~ç¬¬ä¸ƒä½å¼€å¥–å·ç çš„èµ°åŠ¿é¢æ¿æ·»åŠ åˆ°é€‰é¡¹å¡é¢æ¿ä¸­
+		tp.add("ç¬¬ä¸€ä½",new Apanel());
+		tp.add("ç¬¬äºŒä½",new Bpanel());
+		tp.add("ç¬¬ä¸‰ä½",new Cpanel());
+		tp.add("ç¬¬å››ä½",new Dpanel());
+		tp.add("ç¬¬äº”ä½",new Epanel());
+		tp.add("ç¬¬å…­ä½",new Fpanel());
+		tp.add("ç¬¬ä¸ƒä½",new Gpanel());
+		this.getContentPane().add(tp);// æŠŠé€‰é¡¹å¡é¢æ¿æ·»åŠ åˆ°å·ç èµ°åŠ¿å¯¹è¯æ¡†çš„å†…å®¹é¢æ¿ä¸­
+		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);// è¿™æ˜¯å·ç èµ°åŠ¿å¯¹è¯æ¡†çš„å…³é—­æ–¹å¼
+		this.setBounds(450, 100, 563, 593);// è®¾ç½®å·ç èµ°åŠ¿å¯¹è¯æ¡†çš„ä½ç½®å’Œå®½é«˜
 	}
 
 	public static void main(String[] args) {
 		try {
-			UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");// ÉèÖÃºÅÂë×ßÊÆ¶Ô»°¿òµÄÑùÊ½
+			UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");// è®¾ç½®å·ç èµ°åŠ¿å¯¹è¯æ¡†çš„æ ·å¼
 		} catch (Throwable e) {
 			e.printStackTrace();
 		}
-		new SparBuoy();// ´´½¨ºÅÂë×ßÊÆ¶Ô»°¿ò¶ÔÏó
+		new SparBuoy();// åˆ›å»ºå·ç èµ°åŠ¿å¯¹è¯æ¡†å¯¹è±¡
 	}
 
 }

@@ -19,131 +19,131 @@ import com.allchart.GLineChart;
 import com.db.ConnMySQL;
 import com.frame.BackgroundPanel;
 
-public class Gpanel extends JPanel {// µÚÆßÎ»¿ª½±ºÅÂë×ßÊÆÃæ°å
+public class Gpanel extends JPanel {// ç¬¬ä¸ƒä½å¼€å¥–å·ç èµ°åŠ¿é¢æ¿
 
-	public Gpanel() {// µÚÆßÎ»¿ª½±ºÅÂë×ßÊÆÃæ°å
-		this.setBorder(new EmptyBorder(5, 5, 5, 5));// ÉèÖÃµÚÆßÎ»¿ª½±ºÅÂë×ßÊÆÃæ°åµÄ±ß¿òÑùÊ½
-		setLayout(new BorderLayout(0, 0));// ÉèÖÃµÚÆßÎ»¿ª½±ºÅÂë×ßÊÆÃæ°åµÄ²¼¾ÖÎª±ß½ç²¼¾Ö
-		BackgroundPanel contentPane = new BackgroundPanel();// ´´½¨×Ô¶¨Òå±³¾°Ãæ°å
-		contentPane.setImage(getToolkit().getImage(getClass().getResource("/imgs/a9.png")));// ÉèÖÃ±³¾°Ãæ°åµÄÍ¼Æ¬
-		add(contentPane, BorderLayout.CENTER);// Ìí¼Ó±³¾°Ãæ°åµ½ÄÚÈİÃæ°å
-		contentPane.setLayout(null);// ÉèÖÃ±³¾°Ãæ°åµÄ²¼¾ÖÎª¾ø¶Ô²¼¾Ö
+	public Gpanel() {// ç¬¬ä¸ƒä½å¼€å¥–å·ç èµ°åŠ¿é¢æ¿
+		this.setBorder(new EmptyBorder(5, 5, 5, 5));// è®¾ç½®ç¬¬ä¸ƒä½å¼€å¥–å·ç èµ°åŠ¿é¢æ¿çš„è¾¹æ¡†æ ·å¼
+		setLayout(new BorderLayout(0, 0));// è®¾ç½®ç¬¬ä¸ƒä½å¼€å¥–å·ç èµ°åŠ¿é¢æ¿çš„å¸ƒå±€ä¸ºè¾¹ç•Œå¸ƒå±€
+		BackgroundPanel contentPane = new BackgroundPanel();// åˆ›å»ºè‡ªå®šä¹‰èƒŒæ™¯é¢æ¿
+		contentPane.setImage(getToolkit().getImage(getClass().getResource("/imgs/a9.png")));// è®¾ç½®èƒŒæ™¯é¢æ¿çš„å›¾ç‰‡
+		add(contentPane, BorderLayout.CENTER);// æ·»åŠ èƒŒæ™¯é¢æ¿åˆ°å†…å®¹é¢æ¿
+		contentPane.setLayout(null);// è®¾ç½®èƒŒæ™¯é¢æ¿çš„å¸ƒå±€ä¸ºç»å¯¹å¸ƒå±€
 
 		JLabel lblNewLabel = new JLabel(
-				"¸÷¸öÊı×ÖÔÚ¸ÃÎ»Ëù³öÏÖµÄ°Ù·Ö±È");// ¡°¸÷¸öÊı×ÖÔÚ¸ÃÎ»Ëù³öÏÖµÄ°Ù·Ö±È¡±±êÇ©
-		lblNewLabel.setBounds(175, 12, 217, 18);// ÉèÖÃ¡°¸÷¸öÊı×ÖÔÚ¸ÃÎ»Ëù³öÏÖµÄ°Ù·Ö±È¡±±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(lblNewLabel);// °Ñ¡°¸÷¸öÊı×ÖÔÚ¸ÃÎ»Ëù³öÏÖµÄ°Ù·Ö±È¡±±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
-		// ´´½¨¡°1:¡±±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+				"å„ä¸ªæ•°å­—åœ¨è¯¥ä½æ‰€å‡ºç°çš„ç™¾åˆ†æ¯”");// â€œå„ä¸ªæ•°å­—åœ¨è¯¥ä½æ‰€å‡ºç°çš„ç™¾åˆ†æ¯”â€æ ‡ç­¾
+		lblNewLabel.setBounds(175, 12, 217, 18);// è®¾ç½®â€œå„ä¸ªæ•°å­—åœ¨è¯¥ä½æ‰€å‡ºç°çš„ç™¾åˆ†æ¯”â€æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(lblNewLabel);// æŠŠâ€œå„ä¸ªæ•°å­—åœ¨è¯¥ä½æ‰€å‡ºç°çš„ç™¾åˆ†æ¯”â€æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
+		// åˆ›å»ºâ€œ1:â€æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel label = new JLabel("1:");
 		label.setBounds(60, 91, 27, 18);
 		contentPane.add(label);
-		// ´´½¨¡°2:¡±±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºâ€œ2:â€æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel label_1 = new JLabel("2:");
 		label_1.setBounds(60, 136, 27, 18);
 		contentPane.add(label_1);
-		// ´´½¨¡°4:¡±±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºâ€œ4:â€æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel label_2 = new JLabel("4:");
 		label_2.setBounds(60, 226, 27, 18);
 		contentPane.add(label_2);
-		// ´´½¨¡°3:¡±±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºâ€œ3:â€æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel label_3 = new JLabel("3:");
 		label_3.setBounds(60, 181, 27, 18);
 		contentPane.add(label_3);
-		// ´´½¨¡°5:¡±±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºâ€œ5:â€æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel label_4 = new JLabel("5:");
 		label_4.setBounds(60, 274, 27, 18);
 		contentPane.add(label_4);
-		// ´´½¨¡°6:¡±±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºâ€œ6:â€æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel label_5 = new JLabel("6:");
 		label_5.setBounds(60, 319, 27, 18);
 		contentPane.add(label_5);
-		// ´´½¨¡°7:¡±±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºâ€œ7:â€æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel label_6 = new JLabel("7:");
 		label_6.setBounds(60, 364, 27, 18);
 		contentPane.add(label_6);
-		// ´´½¨¡°8:¡±±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºâ€œ8:â€æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel label_7 = new JLabel("8:");
 		label_7.setBounds(60, 409, 27, 18);
 		contentPane.add(label_7);
-		// ´´½¨¡°9:¡±±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºâ€œ9:â€æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel label_8 = new JLabel("9:");
 		label_8.setBounds(60, 454, 27, 18);
 		contentPane.add(label_8);
-		// ´´½¨¡°0:¡±±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºâ€œ0:â€æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel label_9 = new JLabel("0:");
 		label_9.setBounds(60, 44, 27, 29);
 		contentPane.add(label_9);
-		// ´´½¨Óë¡°0:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ£¬ÉèÖÃ¸Ã½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß¡¢Ç°¾°É«¡¢×ÖÌåÑùÊ½ºÍ´óĞ¡ÒÔ¼°³ÊÏÖ½ø¶È×Ö·û´®£¬°Ñ¸Ã½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºä¸â€œ0:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ï¼Œè®¾ç½®è¯¥è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜ã€å‰æ™¯è‰²ã€å­—ä½“æ ·å¼å’Œå¤§å°ä»¥åŠå‘ˆç°è¿›åº¦å­—ç¬¦ä¸²ï¼ŒæŠŠè¯¥è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JProgressBar progressBar_0 = new JProgressBar();
 		progressBar_0.setBounds(94, 43, 321, 32);
 		progressBar_0.setForeground(new Color(255, 165, 0));
 		progressBar_0.setStringPainted(true);
-		progressBar_0.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));
+		progressBar_0.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));
 		contentPane.add(progressBar_0);
-		// ´´½¨Óë¡°1:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ£¬ÉèÖÃ¸Ã½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß¡¢Ç°¾°É«¡¢×ÖÌåÑùÊ½ºÍ´óĞ¡ÒÔ¼°³ÊÏÖ½ø¶È×Ö·û´®£¬°Ñ¸Ã½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºä¸â€œ1:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ï¼Œè®¾ç½®è¯¥è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜ã€å‰æ™¯è‰²ã€å­—ä½“æ ·å¼å’Œå¤§å°ä»¥åŠå‘ˆç°è¿›åº¦å­—ç¬¦ä¸²ï¼ŒæŠŠè¯¥è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JProgressBar progressBar_1 = new JProgressBar();
 		progressBar_1.setBounds(94, 85, 321, 32);
 		progressBar_1.setForeground(new Color(255, 165, 0));
 		progressBar_1.setStringPainted(true);
-		progressBar_1.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));
+		progressBar_1.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));
 		contentPane.add(progressBar_1);
-		// ´´½¨Óë¡°2:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ£¬ÉèÖÃ¸Ã½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß¡¢Ç°¾°É«¡¢×ÖÌåÑùÊ½ºÍ´óĞ¡ÒÔ¼°³ÊÏÖ½ø¶È×Ö·û´®£¬°Ñ¸Ã½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºä¸â€œ2:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ï¼Œè®¾ç½®è¯¥è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜ã€å‰æ™¯è‰²ã€å­—ä½“æ ·å¼å’Œå¤§å°ä»¥åŠå‘ˆç°è¿›åº¦å­—ç¬¦ä¸²ï¼ŒæŠŠè¯¥è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JProgressBar progressBar_2 = new JProgressBar();
 		progressBar_2.setBounds(94, 130, 321, 32);
 		progressBar_2.setForeground(new Color(255, 165, 0));
 		progressBar_2.setStringPainted(true);
-		progressBar_2.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));
+		progressBar_2.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));
 		contentPane.add(progressBar_2);
-		// ´´½¨Óë¡°3:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ£¬ÉèÖÃ¸Ã½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß¡¢Ç°¾°É«¡¢×ÖÌåÑùÊ½ºÍ´óĞ¡ÒÔ¼°³ÊÏÖ½ø¶È×Ö·û´®£¬°Ñ¸Ã½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºä¸â€œ3:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ï¼Œè®¾ç½®è¯¥è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜ã€å‰æ™¯è‰²ã€å­—ä½“æ ·å¼å’Œå¤§å°ä»¥åŠå‘ˆç°è¿›åº¦å­—ç¬¦ä¸²ï¼ŒæŠŠè¯¥è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JProgressBar progressBar_3 = new JProgressBar();
 		progressBar_3.setBounds(94, 175, 321, 32);
 		progressBar_3.setForeground(new Color(255, 165, 0));
 		progressBar_3.setStringPainted(true);
-		progressBar_3.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));
+		progressBar_3.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));
 		contentPane.add(progressBar_3);
-		// ´´½¨Óë¡°4:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ£¬ÉèÖÃ¸Ã½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß¡¢Ç°¾°É«¡¢×ÖÌåÑùÊ½ºÍ´óĞ¡ÒÔ¼°³ÊÏÖ½ø¶È×Ö·û´®£¬°Ñ¸Ã½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºä¸â€œ4:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ï¼Œè®¾ç½®è¯¥è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜ã€å‰æ™¯è‰²ã€å­—ä½“æ ·å¼å’Œå¤§å°ä»¥åŠå‘ˆç°è¿›åº¦å­—ç¬¦ä¸²ï¼ŒæŠŠè¯¥è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JProgressBar progressBar_4 = new JProgressBar();
 		progressBar_4.setBounds(94, 220, 321, 32);
 		progressBar_4.setForeground(new Color(255, 165, 0));
 		progressBar_4.setStringPainted(true);
-		progressBar_4.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));
+		progressBar_4.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));
 		contentPane.add(progressBar_4);
-		// ´´½¨Óë¡°5:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ£¬ÉèÖÃ¸Ã½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß¡¢Ç°¾°É«¡¢×ÖÌåÑùÊ½ºÍ´óĞ¡ÒÔ¼°³ÊÏÖ½ø¶È×Ö·û´®£¬°Ñ¸Ã½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºä¸â€œ5:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ï¼Œè®¾ç½®è¯¥è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜ã€å‰æ™¯è‰²ã€å­—ä½“æ ·å¼å’Œå¤§å°ä»¥åŠå‘ˆç°è¿›åº¦å­—ç¬¦ä¸²ï¼ŒæŠŠè¯¥è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JProgressBar progressBar_5 = new JProgressBar();
 		progressBar_5.setBounds(94, 268, 321, 32);
 		progressBar_5.setForeground(new Color(255, 165, 0));
 		progressBar_5.setStringPainted(true);
-		progressBar_5.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));
+		progressBar_5.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));
 		contentPane.add(progressBar_5);
-		// ´´½¨Óë¡°6:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ£¬ÉèÖÃ¸Ã½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß¡¢Ç°¾°É«¡¢×ÖÌåÑùÊ½ºÍ´óĞ¡ÒÔ¼°³ÊÏÖ½ø¶È×Ö·û´®£¬°Ñ¸Ã½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºä¸â€œ6:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ï¼Œè®¾ç½®è¯¥è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜ã€å‰æ™¯è‰²ã€å­—ä½“æ ·å¼å’Œå¤§å°ä»¥åŠå‘ˆç°è¿›åº¦å­—ç¬¦ä¸²ï¼ŒæŠŠè¯¥è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JProgressBar progressBar_6 = new JProgressBar();
 		progressBar_6.setBounds(94, 313, 321, 32);
 		progressBar_6.setForeground(new Color(255, 165, 0));
 		progressBar_6.setStringPainted(true);
-		progressBar_6.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));
+		progressBar_6.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));
 		contentPane.add(progressBar_6);
-		// ´´½¨Óë¡°7:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ£¬ÉèÖÃ¸Ã½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß¡¢Ç°¾°É«¡¢×ÖÌåÑùÊ½ºÍ´óĞ¡ÒÔ¼°³ÊÏÖ½ø¶È×Ö·û´®£¬°Ñ¸Ã½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºä¸â€œ7:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ï¼Œè®¾ç½®è¯¥è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜ã€å‰æ™¯è‰²ã€å­—ä½“æ ·å¼å’Œå¤§å°ä»¥åŠå‘ˆç°è¿›åº¦å­—ç¬¦ä¸²ï¼ŒæŠŠè¯¥è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JProgressBar progressBar_7 = new JProgressBar();
 		progressBar_7.setBounds(94, 358, 321, 32);
 		progressBar_7.setForeground(new Color(255, 165, 0));
 		progressBar_7.setStringPainted(true);
-		progressBar_7.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));
+		progressBar_7.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));
 		contentPane.add(progressBar_7);
-		// ´´½¨Óë¡°8:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ£¬ÉèÖÃ¸Ã½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß¡¢Ç°¾°É«¡¢×ÖÌåÑùÊ½ºÍ´óĞ¡ÒÔ¼°³ÊÏÖ½ø¶È×Ö·û´®£¬°Ñ¸Ã½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºä¸â€œ8:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ï¼Œè®¾ç½®è¯¥è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜ã€å‰æ™¯è‰²ã€å­—ä½“æ ·å¼å’Œå¤§å°ä»¥åŠå‘ˆç°è¿›åº¦å­—ç¬¦ä¸²ï¼ŒæŠŠè¯¥è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JProgressBar progressBar_8 = new JProgressBar();
 		progressBar_8.setBounds(94, 403, 321, 32);
 		progressBar_8.setForeground(new Color(255, 165, 0));
 		progressBar_8.setStringPainted(true);
-		progressBar_8.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));
+		progressBar_8.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));
 		contentPane.add(progressBar_8);
-		// ´´½¨Óë¡°9:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ£¬ÉèÖÃ¸Ã½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß¡¢Ç°¾°É«¡¢×ÖÌåÑùÊ½ºÍ´óĞ¡ÒÔ¼°³ÊÏÖ½ø¶È×Ö·û´®£¬°Ñ¸Ã½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºä¸â€œ9:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ï¼Œè®¾ç½®è¯¥è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜ã€å‰æ™¯è‰²ã€å­—ä½“æ ·å¼å’Œå¤§å°ä»¥åŠå‘ˆç°è¿›åº¦å­—ç¬¦ä¸²ï¼ŒæŠŠè¯¥è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JProgressBar progressBar_9 = new JProgressBar();
 		progressBar_9.setBounds(94, 448, 321, 32);
 		progressBar_9.setForeground(new Color(255, 165, 0));
 		progressBar_9.setStringPainted(true);
-		progressBar_9.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));
+		progressBar_9.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));
 		contentPane.add(progressBar_9);
-		// ´´½¨°´Å¥£¬ÉèÖÃ¸Ã°´Å¥µÄÎ»ÖÃºÍ¿í¸ß¡¢ÎÄ±¾ÄÚÈİ¡¢×ÖÌåÑùÊ½ºÍ´óĞ¡¡¢Ç°¾°É«£¬°Ñ¸Ã°´Å¥Ìí¼Óµ½±³¾°Ãæ°åÖĞ£¬²¢Îª¸Ã°´Å¥Ìí¼Ó¶¯×÷¼àÌıÊÂ¼ş
+		// åˆ›å»ºæŒ‰é’®ï¼Œè®¾ç½®è¯¥æŒ‰é’®çš„ä½ç½®å’Œå®½é«˜ã€æ–‡æœ¬å†…å®¹ã€å­—ä½“æ ·å¼å’Œå¤§å°ã€å‰æ™¯è‰²ï¼ŒæŠŠè¯¥æŒ‰é’®æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­ï¼Œå¹¶ä¸ºè¯¥æŒ‰é’®æ·»åŠ åŠ¨ä½œç›‘å¬äº‹ä»¶
 		JButton button = new JButton();
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -151,55 +151,55 @@ public class Gpanel extends JPanel {// µÚÆßÎ»¿ª½±ºÅÂë×ßÊÆÃæ°å
 			}
 		});
 		button.setBounds(94, 485, 321, 32);
-		button.setText("²é¿´×î½ü10ÆÚµÄµÚÆßÎ»¿ª½±ºÅÂë×ßÊÆÍ¼");
-		button.setFont(new Font("Ó×Ô²", Font.PLAIN, 16));
+		button.setText("æŸ¥çœ‹æœ€è¿‘10æœŸçš„ç¬¬ä¸ƒä½å¼€å¥–å·ç èµ°åŠ¿å›¾");
+		button.setFont(new Font("å¹¼åœ†", Font.PLAIN, 16));
 		button.setForeground(new Color(0, 102, 153));
 		contentPane.add(button);
-		// ´´½¨Í³¼Æ0³öÏÖµÄ´ÎÊı±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºç»Ÿè®¡0å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel l_0 = new JLabel("");
 		l_0.setBounds(439, 49, 104, 18);
 		contentPane.add(l_0);
-		// ´´½¨Í³¼Æ1³öÏÖµÄ´ÎÊı±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºç»Ÿè®¡1å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel l_1 = new JLabel("");
 		l_1.setBounds(439, 91, 104, 18);
 		contentPane.add(l_1);
-		// ´´½¨Í³¼Æ2³öÏÖµÄ´ÎÊı±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºç»Ÿè®¡2å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel l_2 = new JLabel("");
 		l_2.setBounds(439, 136, 104, 18);
 		contentPane.add(l_2);
-		// ´´½¨Í³¼Æ3³öÏÖµÄ´ÎÊı±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºç»Ÿè®¡3å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel l_3 = new JLabel("");
 		l_3.setBounds(439, 181, 104, 18);
 		contentPane.add(l_3);
-		// ´´½¨Í³¼Æ4³öÏÖµÄ´ÎÊı±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºç»Ÿè®¡4å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel l_4 = new JLabel("");
 		l_4.setBounds(439, 226, 104, 18);
 		contentPane.add(l_4);
-		// ´´½¨Í³¼Æ5³öÏÖµÄ´ÎÊı±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºç»Ÿè®¡5å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel l_5 = new JLabel("");
 		l_5.setBounds(439, 274, 104, 18);
 		contentPane.add(l_5);
-		// ´´½¨Í³¼Æ6³öÏÖµÄ´ÎÊı±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºç»Ÿè®¡6å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel l_6 = new JLabel("");
 		l_6.setBounds(439, 319, 104, 18);
 		contentPane.add(l_6);
-		// ´´½¨Í³¼Æ7³öÏÖµÄ´ÎÊı±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºç»Ÿè®¡7å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel l_7 = new JLabel("");
 		l_7.setBounds(439, 364, 104, 18);
 		contentPane.add(l_7);
-		// ´´½¨Í³¼Æ8³öÏÖµÄ´ÎÊı±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºç»Ÿè®¡8å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel l_8 = new JLabel("");
 		l_8.setBounds(439, 409, 104, 18);
 		contentPane.add(l_8);
-		// ´´½¨Í³¼Æ9³öÏÖµÄ´ÎÊı±êÇ©£¬ÉèÖÃ¸Ã±êÇ©µÄÎ»ÖÃºÍ¿í¸ß£¬°Ñ¸Ã±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		// åˆ›å»ºç»Ÿè®¡9å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾ï¼Œè®¾ç½®è¯¥æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜ï¼ŒæŠŠè¯¥æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		JLabel l_9 = new JLabel("");
 		l_9.setBounds(439, 454, 104, 18);
 		contentPane.add(l_9);
 
-		ConnMySQL con = new ConnMySQL();// Á¬½ÓMySQLÊı¾İ¿â
+		ConnMySQL con = new ConnMySQL();// è¿æ¥MySQLæ•°æ®åº“
 
-		String ab = "g";// µÚÆßÎ»¿ª½±ºÅÂë
-		// »ñµÃµÚÆßÎ»¿ª½±ºÅÂë0~9³öÏÖµÄ´ÎÊı
+		String ab = "g";// ç¬¬ä¸ƒä½å¼€å¥–å·ç 
+		// è·å¾—ç¬¬ä¸ƒä½å¼€å¥–å·ç 0~9å‡ºç°çš„æ¬¡æ•°
 		int i0 = con.getABC(ab, 0);
 		int i1 = con.getABC(ab, 1);
 		int i2 = con.getABC(ab, 2);
@@ -211,21 +211,21 @@ public class Gpanel extends JPanel {// µÚÆßÎ»¿ª½±ºÅÂë×ßÊÆÃæ°å
 		int i8 = con.getABC(ab, 8);
 		int i9 = con.getABC(ab, 9);
 
-		double all = i0 + i1 + i2 + i3 + i4 + i5 + i6 + i7 + i8 + i9;// »ñµÃ¿ª½±´ÎÊı
-		// ÉèÖÃÍ³¼Æ¿ª½±ºÅÂë³öÏÖ´ÎÊı±êÇ©ÖĞµÄÎÄ±¾ÄÚÈİ
-		l_0.setText("³öÏÖ " + i0 + " ´Î");
-		l_1.setText("³öÏÖ " + i1 + " ´Î");
-		l_2.setText("³öÏÖ " + i2 + " ´Î");
-		l_3.setText("³öÏÖ " + i3 + " ´Î");
-		l_4.setText("³öÏÖ " + i4 + " ´Î");
-		l_5.setText("³öÏÖ " + i5 + " ´Î");
-		l_6.setText("³öÏÖ " + i6 + " ´Î");
-		l_7.setText("³öÏÖ " + i7 + " ´Î");
-		l_8.setText("³öÏÖ " + i8 + " ´Î");
-		l_9.setText("³öÏÖ " + i9 + " ´Î");
+		double all = i0 + i1 + i2 + i3 + i4 + i5 + i6 + i7 + i8 + i9;// è·å¾—å¼€å¥–æ¬¡æ•°
+		// è®¾ç½®ç»Ÿè®¡å¼€å¥–å·ç å‡ºç°æ¬¡æ•°æ ‡ç­¾ä¸­çš„æ–‡æœ¬å†…å®¹
+		l_0.setText("å‡ºç° " + i0 + " æ¬¡");
+		l_1.setText("å‡ºç° " + i1 + " æ¬¡");
+		l_2.setText("å‡ºç° " + i2 + " æ¬¡");
+		l_3.setText("å‡ºç° " + i3 + " æ¬¡");
+		l_4.setText("å‡ºç° " + i4 + " æ¬¡");
+		l_5.setText("å‡ºç° " + i5 + " æ¬¡");
+		l_6.setText("å‡ºç° " + i6 + " æ¬¡");
+		l_7.setText("å‡ºç° " + i7 + " æ¬¡");
+		l_8.setText("å‡ºç° " + i8 + " æ¬¡");
+		l_9.setText("å‡ºç° " + i9 + " æ¬¡");
 
-		DecimalFormat df = new DecimalFormat(".###");// ¸ñÊ½»¯£¨±£ÁôÈıÎ»ÓĞĞ§Êı×Ö£©
-		// ÉèÖÃ±»¸ñÊ½»¯µÄ½ø¶È×Ö·û´®µÄÖµ£¬²¢ÉèÖÃ½øÍ¼Ìõµ±Ç°Öµ
+		DecimalFormat df = new DecimalFormat(".###");// æ ¼å¼åŒ–ï¼ˆä¿ç•™ä¸‰ä½æœ‰æ•ˆæ•°å­—ï¼‰
+		// è®¾ç½®è¢«æ ¼å¼åŒ–çš„è¿›åº¦å­—ç¬¦ä¸²çš„å€¼ï¼Œå¹¶è®¾ç½®è¿›å›¾æ¡å½“å‰å€¼
 		progressBar_0.setString(df.format(i0 * 100 / all) + "%");
 		progressBar_0.setValue(i0);
 		progressBar_1.setString(df.format(i1 * 100 / all) + "%");
@@ -249,11 +249,11 @@ public class Gpanel extends JPanel {// µÚÆßÎ»¿ª½±ºÅÂë×ßÊÆÃæ°å
 
 	}
 
-	protected void do_button_actionPerformed(ActionEvent e) {// ¡°²é¿´×î½ü10ÆÚµÄµÚÆßÎ»¿ª½±ºÅÂë×ßÊÆÍ¼¡±¶¯×÷ÊÂ¼şµÄ¼àÌı
-		GLineChart chart = new GLineChart(null, "µÚÆßÎ»¿ª½±ºÅÂë×ßÊÆÍ¼");// ´´½¨¡°µÚÆßÎ»¿ª½±ºÅÂë×ßÊÆÍ¼¡±ÕÛÏßÍ¼´°Ìå¶ÔÏó
-		chart.pack();// µ÷Õû´°¿ÚµÄ´óĞ¡£¬ÒÔÊÊÓ¦ÕÛÏßÍ¼¶ÔÏóµÄÊ×Ñ¡´óĞ¡ºÍ²¼¾Ö
-		RefineryUtilities.centerFrameOnScreen(chart);// ½«ÕÛÏßÍ¼¶ÔÏóÖÃÓÚÆÁÄ»ÖĞ¼ä
-		chart.setVisible(true);// ÉèÖÃÕÛÏßÍ¼´°Ìå¶ÔÏó¿É¼û
+	protected void do_button_actionPerformed(ActionEvent e) {// â€œæŸ¥çœ‹æœ€è¿‘10æœŸçš„ç¬¬ä¸ƒä½å¼€å¥–å·ç èµ°åŠ¿å›¾â€åŠ¨ä½œäº‹ä»¶çš„ç›‘å¬
+		GLineChart chart = new GLineChart(null, "ç¬¬ä¸ƒä½å¼€å¥–å·ç èµ°åŠ¿å›¾");// åˆ›å»ºâ€œç¬¬ä¸ƒä½å¼€å¥–å·ç èµ°åŠ¿å›¾â€æŠ˜çº¿å›¾çª—ä½“å¯¹è±¡
+		chart.pack();// è°ƒæ•´çª—å£çš„å¤§å°ï¼Œä»¥é€‚åº”æŠ˜çº¿å›¾å¯¹è±¡çš„é¦–é€‰å¤§å°å’Œå¸ƒå±€
+		RefineryUtilities.centerFrameOnScreen(chart);// å°†æŠ˜çº¿å›¾å¯¹è±¡ç½®äºå±å¹•ä¸­é—´
+		chart.setVisible(true);// è®¾ç½®æŠ˜çº¿å›¾çª—ä½“å¯¹è±¡å¯è§
 	}
 	
 }

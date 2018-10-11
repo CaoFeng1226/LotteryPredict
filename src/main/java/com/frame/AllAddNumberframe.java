@@ -20,14 +20,14 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 import com.dao.HistoryDao;
 
-public class AllAddNumberframe extends JDialog {// ÅúÁ¿Ìí¼Ó¶Ô»°¿ò
-	private JPanel jcontentPane;// ÄÚÈİÃæ°å
-	private JTextField textField;// ÎÄ¼şÂ·¾¶µÄÎÄ±¾¿ò
-	JLabel erroyLabel;// ¡°Ìí¼ÓÊı¾İ×´Ì¬¡±±êÇ©
+public class AllAddNumberframe extends JDialog {// æ‰¹é‡æ·»åŠ å¯¹è¯æ¡†
+	private JPanel jcontentPane;// å†…å®¹é¢æ¿
+	private JTextField textField;// æ–‡ä»¶è·¯å¾„çš„æ–‡æœ¬æ¡†
+	JLabel erroyLabel;// â€œæ·»åŠ æ•°æ®çŠ¶æ€â€æ ‡ç­¾
 
 	public static void main(String[] args) {
 		try {
-			// ÉèÖÃÅúÁ¿Ìí¼Ó¶Ô»°¿òµÄ·ç¸ñ
+			// è®¾ç½®æ‰¹é‡æ·»åŠ å¯¹è¯æ¡†çš„é£æ ¼
 			UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
 		} catch (Throwable e) {
 			e.printStackTrace();
@@ -35,8 +35,8 @@ public class AllAddNumberframe extends JDialog {// ÅúÁ¿Ìí¼Ó¶Ô»°¿ò
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					AllAddNumberframe frame = new AllAddNumberframe();// ÅúÁ¿Ìí¼Ó¶Ô»°¿ò
-					frame.setVisible(true);// Ê¹ÅúÁ¿Ìí¼Ó¶Ô»°¿ò¿É¼û
+					AllAddNumberframe frame = new AllAddNumberframe();// æ‰¹é‡æ·»åŠ å¯¹è¯æ¡†
+					frame.setVisible(true);// ä½¿æ‰¹é‡æ·»åŠ å¯¹è¯æ¡†å¯è§
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -44,98 +44,98 @@ public class AllAddNumberframe extends JDialog {// ÅúÁ¿Ìí¼Ó¶Ô»°¿ò
 		});
 	}
 
-	public AllAddNumberframe() {// ÅúÁ¿Ìí¼Ó¶Ô»°¿òµÄ¹¹Ôì·½·¨
-		setModal(true);// Ê¹ÅúÁ¿Ìí¼Ó¶Ô»°¿ò×ÜÔÚ×îÇ°
-		setResizable(false);// ÅúÁ¿Ìí¼Ó¶Ô»°¿ò²»¿É¸Ä±ä´óĞ¡
-		setIconImage(Toolkit.getDefaultToolkit().getImage(AllAddNumberframe.class.getResource("/imgs/log.png")));// ÉèÖÃÅúÁ¿Ìí¼Ó¶Ô»°¿òµÄ±êÌâÍ¼±ê
-		setTitle("ÅúÁ¿Ìí¼Ó¿ª½±ºÅÂë");// ÉèÖÃÅúÁ¿Ìí¼Ó¶Ô»°¿òµÄ±êÌâ
-		setBounds(450, 120, 606, 609);// ÉèÖÃÅúÁ¿Ìí¼Ó¶Ô»°¿òµÄÎ»ÖÃÒÔ¼°¿í¸ß
+	public AllAddNumberframe() {// æ‰¹é‡æ·»åŠ å¯¹è¯æ¡†çš„æ„é€ æ–¹æ³•
+		setModal(true);// ä½¿æ‰¹é‡æ·»åŠ å¯¹è¯æ¡†æ€»åœ¨æœ€å‰
+		setResizable(false);// æ‰¹é‡æ·»åŠ å¯¹è¯æ¡†ä¸å¯æ”¹å˜å¤§å°
+		setIconImage(Toolkit.getDefaultToolkit().getImage(AllAddNumberframe.class.getResource("/imgs/log.png")));// è®¾ç½®æ‰¹é‡æ·»åŠ å¯¹è¯æ¡†çš„æ ‡é¢˜å›¾æ ‡
+		setTitle("æ‰¹é‡æ·»åŠ å¼€å¥–å·ç ");// è®¾ç½®æ‰¹é‡æ·»åŠ å¯¹è¯æ¡†çš„æ ‡é¢˜
+		setBounds(450, 120, 606, 609);// è®¾ç½®æ‰¹é‡æ·»åŠ å¯¹è¯æ¡†çš„ä½ç½®ä»¥åŠå®½é«˜
 		
-		jcontentPane = new JPanel();// ÄÚÈİÃæ°å
-		jcontentPane.setLayout(new BorderLayout(0, 0));// ÉèÖÃÄÚÈİÃæ°åµÄ²¼¾ÖÎª±ß½ç²¼¾Ö
-		setContentPane(jcontentPane);// °ÑÄÚÈİÃæ°åÖÃÓÚÅúÁ¿Ìí¼Ó¶Ô»°¿òÖĞ
+		jcontentPane = new JPanel();// å†…å®¹é¢æ¿
+		jcontentPane.setLayout(new BorderLayout(0, 0));// è®¾ç½®å†…å®¹é¢æ¿çš„å¸ƒå±€ä¸ºè¾¹ç•Œå¸ƒå±€
+		setContentPane(jcontentPane);// æŠŠå†…å®¹é¢æ¿ç½®äºæ‰¹é‡æ·»åŠ å¯¹è¯æ¡†ä¸­
 		
-		BackgroundPanel contentPane = new BackgroundPanel();// ´´½¨×Ô¶¨Òå±³¾°Ãæ°å
-		contentPane.setImage(getToolkit().getImage(getClass().getResource("/imgs/001.png")));// ÉèÖÃ×Ô¶¨Òå±³¾°Ãæ°åµÄÍ¼Æ¬
-		jcontentPane.add(contentPane, BorderLayout.CENTER);// Ìí¼Ó×Ô¶¨Òå±³¾°Ãæ°åµ½ÄÚÈİÃæ°åµÄÖĞ¼ä
+		BackgroundPanel contentPane = new BackgroundPanel();// åˆ›å»ºè‡ªå®šä¹‰èƒŒæ™¯é¢æ¿
+		contentPane.setImage(getToolkit().getImage(getClass().getResource("/imgs/001.png")));// è®¾ç½®è‡ªå®šä¹‰èƒŒæ™¯é¢æ¿çš„å›¾ç‰‡
+		jcontentPane.add(contentPane, BorderLayout.CENTER);// æ·»åŠ è‡ªå®šä¹‰èƒŒæ™¯é¢æ¿åˆ°å†…å®¹é¢æ¿çš„ä¸­é—´
 
-		JLabel label = new JLabel("ÎÄ¼şÂ·¾¶£º");// ÎÄ¼şÂ·¾¶±êÇ©
-		label.setBounds(108, 140, 76, 18);// ÉèÖÃÎÄ¼şÂ·¾¶±êÇ©µÄÎ»ÖÃÒÔ¼°¿í¸ß
-		contentPane.add(label);// °ÑÎÄ¼şÂ·¾¶±êÇ©ÖÃÓÚ×Ô¶¨Òå±³¾°Ãæ°åÖĞ
+		JLabel label = new JLabel("æ–‡ä»¶è·¯å¾„ï¼š");// æ–‡ä»¶è·¯å¾„æ ‡ç­¾
+		label.setBounds(108, 140, 76, 18);// è®¾ç½®æ–‡ä»¶è·¯å¾„æ ‡ç­¾çš„ä½ç½®ä»¥åŠå®½é«˜
+		contentPane.add(label);// æŠŠæ–‡ä»¶è·¯å¾„æ ‡ç­¾ç½®äºè‡ªå®šä¹‰èƒŒæ™¯é¢æ¿ä¸­
 
-		textField = new JTextField();// ÎÄ¼şÂ·¾¶µÄÎÄ±¾¿ò
-		textField.setBounds(196, 134, 198, 30);// ÉèÖÃÎÄ¼şÂ·¾¶µÄÎÄ±¾¿òµÄÎ»ÖÃÒÔ¼°¿í¸ß
-		contentPane.add(textField);// °ÑÎÄ¼şÂ·¾¶µÄÎÄ±¾¿òÖÃÓÚ×Ô¶¨Òå±³¾°Ãæ°åÖĞ
-		textField.setColumns(20);// ÉèÖÃÎÄ¼şÂ·¾¶µÄÎÄ±¾¿òµÄ¿í¶È
+		textField = new JTextField();// æ–‡ä»¶è·¯å¾„çš„æ–‡æœ¬æ¡†
+		textField.setBounds(196, 134, 198, 30);// è®¾ç½®æ–‡ä»¶è·¯å¾„çš„æ–‡æœ¬æ¡†çš„ä½ç½®ä»¥åŠå®½é«˜
+		contentPane.add(textField);// æŠŠæ–‡ä»¶è·¯å¾„çš„æ–‡æœ¬æ¡†ç½®äºè‡ªå®šä¹‰èƒŒæ™¯é¢æ¿ä¸­
+		textField.setColumns(20);// è®¾ç½®æ–‡ä»¶è·¯å¾„çš„æ–‡æœ¬æ¡†çš„å®½åº¦
 
-		JButton button = new JButton("");// Ñ¡ÔñÎÄ¼şÂ·¾¶°´Å¥
-		button.setIcon(new ImageIcon(AllAddNumberframe.class.getResource("/img_btn/a06.png")));// ÉèÖÃÑ¡ÔñÎÄ¼şÂ·¾¶°´Å¥µÄÍ¼±ê
-		button.setBounds(406, 136, 62, 28);// ÉèÖÃÑ¡ÔñÎÄ¼şÂ·¾¶°´Å¥µÄÎ»ÖÃÒÔ¼°¿í¸ß
+		JButton button = new JButton("");// é€‰æ‹©æ–‡ä»¶è·¯å¾„æŒ‰é’®
+		button.setIcon(new ImageIcon(AllAddNumberframe.class.getResource("/img_btn/a06.png")));// è®¾ç½®é€‰æ‹©æ–‡ä»¶è·¯å¾„æŒ‰é’®çš„å›¾æ ‡
+		button.setBounds(406, 136, 62, 28);// è®¾ç½®é€‰æ‹©æ–‡ä»¶è·¯å¾„æŒ‰é’®çš„ä½ç½®ä»¥åŠå®½é«˜
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				do_button_actionPerformed(e);// ÎªÑ¡ÔñÎÄ¼şÂ·¾¶°´Å¥Ìí¼Ó¶¯×÷ÊÂ¼şµÄ¼àÌı
+				do_button_actionPerformed(e);// ä¸ºé€‰æ‹©æ–‡ä»¶è·¯å¾„æŒ‰é’®æ·»åŠ åŠ¨ä½œäº‹ä»¶çš„ç›‘å¬
 			}
 		});
-		contentPane.add(button);// °ÑÑ¡ÔñÎÄ¼şÂ·¾¶°´Å¥ÖÃÓÚ×Ô¶¨Òå±³¾°Ãæ°åÖĞ
+		contentPane.add(button);// æŠŠé€‰æ‹©æ–‡ä»¶è·¯å¾„æŒ‰é’®ç½®äºè‡ªå®šä¹‰èƒŒæ™¯é¢æ¿ä¸­
 
-		JButton btnNewButton = new JButton("");// ¹Ø±Õ°´Å¥
-		btnNewButton.setIcon(new ImageIcon(AllAddNumberframe.class.getResource("/img_btn/a07.png")));// ÉèÖÃ¹Ø±Õ°´Å¥µÄÍ¼±ê
+		JButton btnNewButton = new JButton("");// å…³é—­æŒ‰é’®
+		btnNewButton.setIcon(new ImageIcon(AllAddNumberframe.class.getResource("/img_btn/a07.png")));// è®¾ç½®å…³é—­æŒ‰é’®çš„å›¾æ ‡
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				do_btnNewButton_actionPerformed(e);// Îª¹Ø±Õ°´Å¥Ìí¼Ó¶¯×÷ÊÂ¼şµÄ¼àÌı
+				do_btnNewButton_actionPerformed(e);// ä¸ºå…³é—­æŒ‰é’®æ·»åŠ åŠ¨ä½œäº‹ä»¶çš„ç›‘å¬
 			}
 		});
-		btnNewButton.setBounds(312, 412, 108, 79);// ÉèÖÃ¹Ø±Õ°´Å¥µÄÎ»ÖÃÒÔ¼°¿í¸ß
-		contentPane.add(btnNewButton);// °Ñ¹Ø±Õ°´Å¥ÖÃÓÚ×Ô¶¨Òå±³¾°Ãæ°åÖĞ
+		btnNewButton.setBounds(312, 412, 108, 79);// è®¾ç½®å…³é—­æŒ‰é’®çš„ä½ç½®ä»¥åŠå®½é«˜
+		contentPane.add(btnNewButton);// æŠŠå…³é—­æŒ‰é’®ç½®äºè‡ªå®šä¹‰èƒŒæ™¯é¢æ¿ä¸­
 
-		JButton button_1 = new JButton("");// Ìí¼Ó°´Å¥
-		button_1.setIcon(new ImageIcon(AllAddNumberframe.class.getResource("/img_btn/a04.png")));// ÉèÖÃÌí¼Ó°´Å¥µÄÍ¼±ê
+		JButton button_1 = new JButton("");// æ·»åŠ æŒ‰é’®
+		button_1.setIcon(new ImageIcon(AllAddNumberframe.class.getResource("/img_btn/a04.png")));// è®¾ç½®æ·»åŠ æŒ‰é’®çš„å›¾æ ‡
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				do_button_1_actionPerformed(e);// ÎªÌí¼Ó°´Å¥Ìí¼Ó¶¯×÷ÊÂ¼şµÄ¼àÌı
+				do_button_1_actionPerformed(e);// ä¸ºæ·»åŠ æŒ‰é’®æ·»åŠ åŠ¨ä½œäº‹ä»¶çš„ç›‘å¬
 			}
 		});
-		button_1.setBounds(172, 412, 108, 75);// ÉèÖÃÌí¼Ó°´Å¥µÄÎ»ÖÃÒÔ¼°¿í¸ß
-		contentPane.add(button_1);// °ÑÌí¼Ó°´Å¥ÖÃÓÚ×Ô¶¨Òå±³¾°Ãæ°åÖĞ
+		button_1.setBounds(172, 412, 108, 75);// è®¾ç½®æ·»åŠ æŒ‰é’®çš„ä½ç½®ä»¥åŠå®½é«˜
+		contentPane.add(button_1);// æŠŠæ·»åŠ æŒ‰é’®ç½®äºè‡ªå®šä¹‰èƒŒæ™¯é¢æ¿ä¸­
 
-		erroyLabel = new JLabel("");// ¡°Ìí¼ÓÊı¾İ×´Ì¬¡±±êÇ©
-		erroyLabel.setBounds(216, 97, 223, 18);// ÉèÖÃ¡°Ìí¼ÓÊı¾İ×´Ì¬¡±±êÇ©µÄÎ»ÖÃÒÔ¼°¿í¸ß
-		contentPane.add(erroyLabel);// °Ñ¡°Ìí¼ÓÊı¾İ×´Ì¬¡±±êÇ©ÖÃÓÚ×Ô¶¨Òå±³¾°Ãæ°åÖĞ
+		erroyLabel = new JLabel("");// â€œæ·»åŠ æ•°æ®çŠ¶æ€â€æ ‡ç­¾
+		erroyLabel.setBounds(216, 97, 223, 18);// è®¾ç½®â€œæ·»åŠ æ•°æ®çŠ¶æ€â€æ ‡ç­¾çš„ä½ç½®ä»¥åŠå®½é«˜
+		contentPane.add(erroyLabel);// æŠŠâ€œæ·»åŠ æ•°æ®çŠ¶æ€â€æ ‡ç­¾ç½®äºè‡ªå®šä¹‰èƒŒæ™¯é¢æ¿ä¸­
 
-		JButton btnNewButton_1 = new JButton("");// ÊµÀıÍ¼Æ¬°´Å¥
-		btnNewButton_1.setIcon(new ImageIcon(AllAddNumberframe.class.getResource("/imgs/demo.png")));// ÉèÖÃÊµÀıÍ¼Æ¬°´Å¥µÄÍ¼±ê
-		btnNewButton_1.setBounds(221, 191, 247, 206);// ÉèÖÃÊµÀıÍ¼Æ¬°´Å¥µÄÎ»ÖÃÒÔ¼°¿í¸ß
-		contentPane.add(btnNewButton_1);// °ÑÊµÀıÍ¼Æ¬°´Å¥ÖÃÓÚ×Ô¶¨Òå±³¾°Ãæ°åÖĞ
+		JButton btnNewButton_1 = new JButton("");// å®ä¾‹å›¾ç‰‡æŒ‰é’®
+		btnNewButton_1.setIcon(new ImageIcon(AllAddNumberframe.class.getResource("/imgs/demo.png")));// è®¾ç½®å®ä¾‹å›¾ç‰‡æŒ‰é’®çš„å›¾æ ‡
+		btnNewButton_1.setBounds(221, 191, 247, 206);// è®¾ç½®å®ä¾‹å›¾ç‰‡æŒ‰é’®çš„ä½ç½®ä»¥åŠå®½é«˜
+		contentPane.add(btnNewButton_1);// æŠŠå®ä¾‹å›¾ç‰‡æŒ‰é’®ç½®äºè‡ªå®šä¹‰èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel lblNewLabel = new JLabel("ÎÄ±¾Ğ´·¨ÈçÍ¼ËùÊ¾£º");// Í¼Æ¬ÊµÀı±êÇ©
-		lblNewLabel.setBounds(108, 191, 122, 18);// ÉèÖÃÍ¼Æ¬ÊµÀı±êÇ©µÄÎ»ÖÃÒÔ¼°¿í¸ß
-		contentPane.add(lblNewLabel);// °ÑÍ¼Æ¬ÊµÀı±êÇ©ÖÃÓÚ×Ô¶¨Òå±³¾°Ãæ°åÖĞ
+		JLabel lblNewLabel = new JLabel("æ–‡æœ¬å†™æ³•å¦‚å›¾æ‰€ç¤ºï¼š");// å›¾ç‰‡å®ä¾‹æ ‡ç­¾
+		lblNewLabel.setBounds(108, 191, 122, 18);// è®¾ç½®å›¾ç‰‡å®ä¾‹æ ‡ç­¾çš„ä½ç½®ä»¥åŠå®½é«˜
+		contentPane.add(lblNewLabel);// æŠŠå›¾ç‰‡å®ä¾‹æ ‡ç­¾ç½®äºè‡ªå®šä¹‰èƒŒæ™¯é¢æ¿ä¸­
 	}
 
-	protected void do_button_actionPerformed(ActionEvent e) {// Ñ¡ÔñÎÄ¼şÂ·¾¶°´Å¥¶¯×÷ÊÂ¼şµÄ¼àÌı
-		JFileChooser chooser = new JFileChooser();// ´´½¨ÎÄ¼şÑ¡ÔñÆ÷
-		FileFilter filter = new FileNameExtensionFilter("ÎÄ±¾ÎÄ¼ş(*.txt)", "txt");// »ñµÃËùÓĞÄ¿Â¼ÖĞ°üº¬txtÎÄ¼şÀ©Õ¹ÃûµÄÎÄ¼ş
-		chooser.setFileFilter(filter);// ÎªÎÄ¼şÑ¡Ôñ¶Ô»°¿òÉèÖÃÎÄ¼ş¹ıÂËÆ÷
-		chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);// ÉèÖÃ½öÄÜÑ¡ÔñÎÄ¼ş
-		chooser.setMultiSelectionEnabled(false);// ½ûÓÃ¶àÖØÑ¡Ôñ
-		int result = chooser.showOpenDialog(this);// »ñµÃÎÄ¼şÑ¡ÔñÆ÷×´Ì¬
-		if (result == JFileChooser.APPROVE_OPTION) {// µã»÷ÎÄ¼şÑ¡ÔñÆ÷ÖĞµÄ¡°È·ÈÏ¡±ºó
-			File file = chooser.getSelectedFile();// »ñµÃÓÃ»§Ñ¡ÔñµÄÎÄ¼ş
-			textField.setText(file.getAbsolutePath());// ¸üĞÂÎÄ¼şÂ·¾¶µÄÎÄ±¾¿òÄÚÈİ
+	protected void do_button_actionPerformed(ActionEvent e) {// é€‰æ‹©æ–‡ä»¶è·¯å¾„æŒ‰é’®åŠ¨ä½œäº‹ä»¶çš„ç›‘å¬
+		JFileChooser chooser = new JFileChooser();// åˆ›å»ºæ–‡ä»¶é€‰æ‹©å™¨
+		FileFilter filter = new FileNameExtensionFilter("æ–‡æœ¬æ–‡ä»¶(*.txt)", "txt");// è·å¾—æ‰€æœ‰ç›®å½•ä¸­åŒ…å«txtæ–‡ä»¶æ‰©å±•åçš„æ–‡ä»¶
+		chooser.setFileFilter(filter);// ä¸ºæ–‡ä»¶é€‰æ‹©å¯¹è¯æ¡†è®¾ç½®æ–‡ä»¶è¿‡æ»¤å™¨
+		chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);// è®¾ç½®ä»…èƒ½é€‰æ‹©æ–‡ä»¶
+		chooser.setMultiSelectionEnabled(false);// ç¦ç”¨å¤šé‡é€‰æ‹©
+		int result = chooser.showOpenDialog(this);// è·å¾—æ–‡ä»¶é€‰æ‹©å™¨çŠ¶æ€
+		if (result == JFileChooser.APPROVE_OPTION) {// ç‚¹å‡»æ–‡ä»¶é€‰æ‹©å™¨ä¸­çš„â€œç¡®è®¤â€å
+			File file = chooser.getSelectedFile();// è·å¾—ç”¨æˆ·é€‰æ‹©çš„æ–‡ä»¶
+			textField.setText(file.getAbsolutePath());// æ›´æ–°æ–‡ä»¶è·¯å¾„çš„æ–‡æœ¬æ¡†å†…å®¹
 		}
 	}
 
-	protected void do_button_1_actionPerformed(ActionEvent e) {// ÎªÌí¼Ó°´Å¥Ìí¼Ó¶¯×÷ÊÂ¼şµÄ¼àÌı
-		String s = textField.getText();// »ñµÃÎÄ¼şÂ·¾¶µÄÎÄ±¾¿òÖĞµÄÄÚÈİ
-		HistoryDao his = new HistoryDao();// ²Ù×÷¿ª½±ĞÅÏ¢
-		if (his.allAddNumber(s)) {// Ìí¼Ó¿ª½±ºÅÂë³É¹¦
-			erroyLabel.setText("Ìí¼Ó³É¹¦");// ÉèÖÃ¡°Ìí¼ÓÊı¾İ×´Ì¬¡±±êÇ©µÄÄÚÈİ
-		} else {// Ìí¼Ó¿ª½±ºÅÂëÊ§°Ü
-			erroyLabel.setText("Ìí¼ÓÊ§°Ü");// ÉèÖÃ¡°Ìí¼ÓÊı¾İ×´Ì¬¡±±êÇ©µÄÄÚÈİ
+	protected void do_button_1_actionPerformed(ActionEvent e) {// ä¸ºæ·»åŠ æŒ‰é’®æ·»åŠ åŠ¨ä½œäº‹ä»¶çš„ç›‘å¬
+		String s = textField.getText();// è·å¾—æ–‡ä»¶è·¯å¾„çš„æ–‡æœ¬æ¡†ä¸­çš„å†…å®¹
+		HistoryDao his = new HistoryDao();// æ“ä½œå¼€å¥–ä¿¡æ¯
+		if (his.allAddNumber(s)) {// æ·»åŠ å¼€å¥–å·ç æˆåŠŸ
+			erroyLabel.setText("æ·»åŠ æˆåŠŸ");// è®¾ç½®â€œæ·»åŠ æ•°æ®çŠ¶æ€â€æ ‡ç­¾çš„å†…å®¹
+		} else {// æ·»åŠ å¼€å¥–å·ç å¤±è´¥
+			erroyLabel.setText("æ·»åŠ å¤±è´¥");// è®¾ç½®â€œæ·»åŠ æ•°æ®çŠ¶æ€â€æ ‡ç­¾çš„å†…å®¹
 		}
 	}
 
-	protected void do_btnNewButton_actionPerformed(ActionEvent e) {// Îª¹Ø±Õ°´Å¥Ìí¼Ó¶¯×÷ÊÂ¼şµÄ¼àÌı
-		this.setVisible(false);// Ê¹ÅúÁ¿Ìí¼Ó¶Ô»°¿ò²»¿É¼û
+	protected void do_btnNewButton_actionPerformed(ActionEvent e) {// ä¸ºå…³é—­æŒ‰é’®æ·»åŠ åŠ¨ä½œäº‹ä»¶çš„ç›‘å¬
+		this.setVisible(false);// ä½¿æ‰¹é‡æ·»åŠ å¯¹è¯æ¡†ä¸å¯è§
 	}
 }

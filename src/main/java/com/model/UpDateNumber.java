@@ -1,19 +1,19 @@
 package com.model;
 
-public class UpDateNumber {// ĞŞ¸Ä¿ª½±ÆÚÊı
-	private int number;// ÒªĞŞ¸ÄµÄ¿ª½±ÆÚÊı
-	static int n;// ÉùÃ÷¾²Ì¬±äÁ¿n£¬´æ´¢ÒªĞŞ¸ÄµÄ¿ª½±ÆÚÊı
+public class UpDateNumber {// ä¿®æ”¹å¼€å¥–æœŸæ•°
+	private int number;// è¦ä¿®æ”¹çš„å¼€å¥–æœŸæ•°
+	static int n;// å£°æ˜é™æ€å˜é‡nï¼Œå­˜å‚¨è¦ä¿®æ”¹çš„å¼€å¥–æœŸæ•°
 
-	public int getNumber() {// »ñµÃÒªĞŞ¸ÄµÄ¿ª½±ÆÚÊı
+	public int getNumber() {// è·å¾—è¦ä¿®æ”¹çš„å¼€å¥–æœŸæ•°
 		return number;
 	}
 
-	public void setNumber(int number) {// ÎªÒªĞŞ¸ÄµÄ¿ª½±ÆÚÊı¸³Öµ
+	public void setNumber(int number) {// ä¸ºè¦ä¿®æ”¹çš„å¼€å¥–æœŸæ•°èµ‹å€¼
 		this.number = number;
-		n = number;// ½«ÒªĞŞ¸ÄµÄ¿ª½±ÆÚÊı¸³Öµ¸ø¾²Ì¬±äÁ¿n
+		n = number;// å°†è¦ä¿®æ”¹çš„å¼€å¥–æœŸæ•°èµ‹å€¼ç»™é™æ€å˜é‡n
 	}
 
-	public static int getN() {// »ñµÃÒªĞŞ¸ÄµÄ¿ª½±ÆÚÊı
+	public static int getN() {// è·å¾—è¦ä¿®æ”¹çš„å¼€å¥–æœŸæ•°
 		return n;
 	}
 }

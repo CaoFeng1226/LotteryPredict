@@ -20,222 +20,222 @@ import com.allchart.ALineChart;
 import com.db.ConnMySQL;
 import com.frame.BackgroundPanel;
 
-public class Apanel extends JPanel {// µÚÒ»Î»¿ª½±ºÅÂë×ßÊÆÃæ°å
+public class Apanel extends JPanel {// ç¬¬ä¸€ä½å¼€å¥–å·ç èµ°åŠ¿é¢æ¿
 
-	public Apanel() {// µÚÒ»Î»¿ª½±ºÅÂëµÄ×ßÊÆÃæ°å
-		this.setBorder(new EmptyBorder(5, 5, 5, 5));// ÉèÖÃµÚÒ»Î»¿ª½±ºÅÂë×ßÊÆÃæ°åµÄ±ß¿òÑùÊ½
-		setLayout(new BorderLayout(0, 0));// ÉèÖÃµÚÒ»Î»¿ª½±ºÅÂë×ßÊÆÃæ°åµÄ²¼¾ÖÎª±ß½ç²¼¾Ö
-		BackgroundPanel contentPane = new BackgroundPanel();// ´´½¨×Ô¶¨Òå±³¾°Ãæ°å
-		contentPane.setImage(getToolkit().getImage(getClass().getResource("/imgs/a9.png")));// ÉèÖÃ±³¾°Ãæ°åµÄÍ¼Æ¬
-		add(contentPane, BorderLayout.CENTER);// Ìí¼Ó±³¾°Ãæ°åµ½µÚÒ»Î»¿ª½±ºÅÂë×ßÊÆÃæ°åµÄÖĞ¼ä
-		contentPane.setLayout(null);// ÉèÖÃ±³¾°Ãæ°åµÄ²¼¾ÖÎª¾ø¶Ô²¼¾Ö
+	public Apanel() {// ç¬¬ä¸€ä½å¼€å¥–å·ç çš„èµ°åŠ¿é¢æ¿
+		this.setBorder(new EmptyBorder(5, 5, 5, 5));// è®¾ç½®ç¬¬ä¸€ä½å¼€å¥–å·ç èµ°åŠ¿é¢æ¿çš„è¾¹æ¡†æ ·å¼
+		setLayout(new BorderLayout(0, 0));// è®¾ç½®ç¬¬ä¸€ä½å¼€å¥–å·ç èµ°åŠ¿é¢æ¿çš„å¸ƒå±€ä¸ºè¾¹ç•Œå¸ƒå±€
+		BackgroundPanel contentPane = new BackgroundPanel();// åˆ›å»ºè‡ªå®šä¹‰èƒŒæ™¯é¢æ¿
+		contentPane.setImage(getToolkit().getImage(getClass().getResource("/imgs/a9.png")));// è®¾ç½®èƒŒæ™¯é¢æ¿çš„å›¾ç‰‡
+		add(contentPane, BorderLayout.CENTER);// æ·»åŠ èƒŒæ™¯é¢æ¿åˆ°ç¬¬ä¸€ä½å¼€å¥–å·ç èµ°åŠ¿é¢æ¿çš„ä¸­é—´
+		contentPane.setLayout(null);// è®¾ç½®èƒŒæ™¯é¢æ¿çš„å¸ƒå±€ä¸ºç»å¯¹å¸ƒå±€
 
 		JLabel lblNewLabel = new JLabel(
-				"¸÷¸öÊı×ÖÔÚ¸ÃÎ»Ëù³öÏÖµÄ°Ù·Ö±È");// ¡°¸÷¸öÊı×ÖÔÚ¸ÃÎ»Ëù³öÏÖµÄ°Ù·Ö±È¡±±êÇ©
-		lblNewLabel.setBounds(175, 12, 217, 18);// ÉèÖÃ¡°¸÷¸öÊı×ÖÔÚ¸ÃÎ»Ëù³öÏÖµÄ°Ù·Ö±È¡±±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(lblNewLabel);// °Ñ¡°¸÷¸öÊı×ÖÔÚ¸ÃÎ»Ëù³öÏÖµÄ°Ù·Ö±È¡±±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+				"å„ä¸ªæ•°å­—åœ¨è¯¥ä½æ‰€å‡ºç°çš„ç™¾åˆ†æ¯”");// â€œå„ä¸ªæ•°å­—åœ¨è¯¥ä½æ‰€å‡ºç°çš„ç™¾åˆ†æ¯”â€æ ‡ç­¾
+		lblNewLabel.setBounds(175, 12, 217, 18);// è®¾ç½®â€œå„ä¸ªæ•°å­—åœ¨è¯¥ä½æ‰€å‡ºç°çš„ç™¾åˆ†æ¯”â€æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(lblNewLabel);// æŠŠâ€œå„ä¸ªæ•°å­—åœ¨è¯¥ä½æ‰€å‡ºç°çš„ç™¾åˆ†æ¯”â€æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel label = new JLabel("1:");// ¡°1:¡±±êÇ©
-		label.setBounds(60, 91, 27, 18);// ÉèÖÃ¡°1:¡±±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(label);// °Ñ¡°1:¡±±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel label = new JLabel("1:");// â€œ1:â€æ ‡ç­¾
+		label.setBounds(60, 91, 27, 18);// è®¾ç½®â€œ1:â€æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(label);// æŠŠâ€œ1:â€æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel label_1 = new JLabel("2:");// ¡°2:¡±±êÇ©
-		label_1.setBounds(60, 136, 27, 18);// ÉèÖÃ¡°2:¡±±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(label_1);// °Ñ¡°2:¡±±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel label_1 = new JLabel("2:");// â€œ2:â€æ ‡ç­¾
+		label_1.setBounds(60, 136, 27, 18);// è®¾ç½®â€œ2:â€æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(label_1);// æŠŠâ€œ2:â€æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel label_2 = new JLabel("4:");// ¡°4:¡±±êÇ©
-		label_2.setBounds(60, 226, 27, 18);// ÉèÖÃ¡°4:¡±±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(label_2);// °Ñ¡°4:¡±±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel label_2 = new JLabel("4:");// â€œ4:â€æ ‡ç­¾
+		label_2.setBounds(60, 226, 27, 18);// è®¾ç½®â€œ4:â€æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(label_2);// æŠŠâ€œ4:â€æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel label_3 = new JLabel("3:");// ¡°3:¡±±êÇ©
-		label_3.setBounds(60, 181, 27, 18);// ÉèÖÃ¡°3:¡±±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(label_3);// °Ñ¡°3:¡±±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel label_3 = new JLabel("3:");// â€œ3:â€æ ‡ç­¾
+		label_3.setBounds(60, 181, 27, 18);// è®¾ç½®â€œ3:â€æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(label_3);// æŠŠâ€œ3:â€æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel label_4 = new JLabel("5:");// ¡°5:¡±±êÇ©
-		label_4.setBounds(60, 274, 27, 18);// ÉèÖÃ¡°5:¡±±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(label_4);// °Ñ¡°5:¡±±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel label_4 = new JLabel("5:");// â€œ5:â€æ ‡ç­¾
+		label_4.setBounds(60, 274, 27, 18);// è®¾ç½®â€œ5:â€æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(label_4);// æŠŠâ€œ5:â€æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel label_5 = new JLabel("6:");// ¡°6:¡±±êÇ©
-		label_5.setBounds(60, 319, 27, 18);// ÉèÖÃ¡°6:¡±±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(label_5);// °Ñ¡°6:¡±±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel label_5 = new JLabel("6:");// â€œ6:â€æ ‡ç­¾
+		label_5.setBounds(60, 319, 27, 18);// è®¾ç½®â€œ6:â€æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(label_5);// æŠŠâ€œ6:â€æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel label_6 = new JLabel("7:");// ¡°7:¡±±êÇ©
-		label_6.setBounds(60, 364, 27, 18);// ÉèÖÃ¡°7:¡±±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(label_6);// °Ñ¡°7:¡±±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel label_6 = new JLabel("7:");// â€œ7:â€æ ‡ç­¾
+		label_6.setBounds(60, 364, 27, 18);// è®¾ç½®â€œ7:â€æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(label_6);// æŠŠâ€œ7:â€æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel label_7 = new JLabel("8:");// ¡°8:¡±±êÇ©
-		label_7.setBounds(60, 409, 27, 18);// ÉèÖÃ¡°8:¡±±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(label_7);// °Ñ¡°8:¡±±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel label_7 = new JLabel("8:");// â€œ8:â€æ ‡ç­¾
+		label_7.setBounds(60, 409, 27, 18);// è®¾ç½®â€œ8:â€æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(label_7);// æŠŠâ€œ8:â€æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel label_8 = new JLabel("9:");// ¡°9:¡±±êÇ©
-		label_8.setBounds(60, 454, 27, 18);// ÉèÖÃ¡°9:¡±±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(label_8);// °Ñ¡°9:¡±±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel label_8 = new JLabel("9:");// â€œ9:â€æ ‡ç­¾
+		label_8.setBounds(60, 454, 27, 18);// è®¾ç½®â€œ9:â€æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(label_8);// æŠŠâ€œ9:â€æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel label_9 = new JLabel("0:");// ¡°0:¡±±êÇ©
-		label_9.setBounds(60, 44, 27, 29);// ÉèÖÃ¡°0:¡±±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(label_9);// °Ñ¡°0:¡±±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel label_9 = new JLabel("0:");// â€œ0:â€æ ‡ç­¾
+		label_9.setBounds(60, 44, 27, 29);// è®¾ç½®â€œ0:â€æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(label_9);// æŠŠâ€œ0:â€æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JProgressBar progressBar_0 = new JProgressBar();// Óë¡°0:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ
-		progressBar_0.setBounds(94, 43, 321, 32);// ÉèÖÃÓë¡°0:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß
-		progressBar_0.setForeground(new Color(255, 165, 0));// ÉèÖÃÓë¡°0:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÖĞµÄÇ°¾°É«
-		progressBar_0.setStringPainted(true);// ÉèÖÃÓë¡°0:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ³ÊÏÖ½ø¶È×Ö·û´®
-		progressBar_0.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));// ÉèÖÃÓë¡°0:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄ×ÖÌåÑùÊ½ºÍ´óĞ¡
-		contentPane.add(progressBar_0);// °ÑÓë¡°0:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		JProgressBar progressBar_0 = new JProgressBar();// ä¸â€œ0:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡
+		progressBar_0.setBounds(94, 43, 321, 32);// è®¾ç½®ä¸â€œ0:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜
+		progressBar_0.setForeground(new Color(255, 165, 0));// è®¾ç½®ä¸â€œ0:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ä¸­çš„å‰æ™¯è‰²
+		progressBar_0.setStringPainted(true);// è®¾ç½®ä¸â€œ0:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡å‘ˆç°è¿›åº¦å­—ç¬¦ä¸²
+		progressBar_0.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));// è®¾ç½®ä¸â€œ0:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„å­—ä½“æ ·å¼å’Œå¤§å°
+		contentPane.add(progressBar_0);// æŠŠä¸â€œ0:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JProgressBar progressBar_1 = new JProgressBar();// Óë¡°1:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ
-		progressBar_1.setBounds(94, 85, 321, 32);// ÉèÖÃÓë¡°1:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß
-		progressBar_1.setForeground(new Color(255, 165, 0));// ÉèÖÃÓë¡°1:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÖĞµÄÇ°¾°É«
-		progressBar_1.setStringPainted(true);// ÉèÖÃÓë¡°1:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ³ÊÏÖ½ø¶È×Ö·û´®
-		progressBar_1.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));// ÉèÖÃÓë¡°1:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄ×ÖÌåÑùÊ½ºÍ´óĞ¡
-		contentPane.add(progressBar_1);// °ÑÓë¡°1:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		JProgressBar progressBar_1 = new JProgressBar();// ä¸â€œ1:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡
+		progressBar_1.setBounds(94, 85, 321, 32);// è®¾ç½®ä¸â€œ1:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜
+		progressBar_1.setForeground(new Color(255, 165, 0));// è®¾ç½®ä¸â€œ1:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ä¸­çš„å‰æ™¯è‰²
+		progressBar_1.setStringPainted(true);// è®¾ç½®ä¸â€œ1:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡å‘ˆç°è¿›åº¦å­—ç¬¦ä¸²
+		progressBar_1.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));// è®¾ç½®ä¸â€œ1:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„å­—ä½“æ ·å¼å’Œå¤§å°
+		contentPane.add(progressBar_1);// æŠŠä¸â€œ1:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JProgressBar progressBar_2 = new JProgressBar();// Óë¡°2:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ
-		progressBar_2.setBounds(94, 130, 321, 32);// ÉèÖÃÓë¡°2:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß
-		progressBar_2.setForeground(new Color(255, 165, 0));// ÉèÖÃÓë¡°2:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÖĞµÄÇ°¾°É«
-		progressBar_2.setStringPainted(true);// ÉèÖÃÓë¡°1:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ³ÊÏÖ½ø¶È×Ö·û´®
-		progressBar_2.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));// ÉèÖÃÓë¡°2:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄ×ÖÌåÑùÊ½ºÍ´óĞ¡
-		contentPane.add(progressBar_2);// °ÑÓë¡°2:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		JProgressBar progressBar_2 = new JProgressBar();// ä¸â€œ2:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡
+		progressBar_2.setBounds(94, 130, 321, 32);// è®¾ç½®ä¸â€œ2:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜
+		progressBar_2.setForeground(new Color(255, 165, 0));// è®¾ç½®ä¸â€œ2:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ä¸­çš„å‰æ™¯è‰²
+		progressBar_2.setStringPainted(true);// è®¾ç½®ä¸â€œ1:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡å‘ˆç°è¿›åº¦å­—ç¬¦ä¸²
+		progressBar_2.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));// è®¾ç½®ä¸â€œ2:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„å­—ä½“æ ·å¼å’Œå¤§å°
+		contentPane.add(progressBar_2);// æŠŠä¸â€œ2:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JProgressBar progressBar_3 = new JProgressBar();// Óë¡°3:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ
-		progressBar_3.setBounds(94, 175, 321, 32);// ÉèÖÃÓë¡°3:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß
-		progressBar_3.setForeground(new Color(255, 165, 0));// ÉèÖÃÓë¡°3:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÖĞµÄÇ°¾°É«
-		progressBar_3.setStringPainted(true);// ÉèÖÃÓë¡°3:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ³ÊÏÖ½ø¶È×Ö·û´®
-		progressBar_3.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));// ÉèÖÃÓë¡°3:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄ×ÖÌåÑùÊ½ºÍ´óĞ¡
-		contentPane.add(progressBar_3);// °ÑÓë¡°3:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		JProgressBar progressBar_3 = new JProgressBar();// ä¸â€œ3:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡
+		progressBar_3.setBounds(94, 175, 321, 32);// è®¾ç½®ä¸â€œ3:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜
+		progressBar_3.setForeground(new Color(255, 165, 0));// è®¾ç½®ä¸â€œ3:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ä¸­çš„å‰æ™¯è‰²
+		progressBar_3.setStringPainted(true);// è®¾ç½®ä¸â€œ3:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡å‘ˆç°è¿›åº¦å­—ç¬¦ä¸²
+		progressBar_3.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));// è®¾ç½®ä¸â€œ3:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„å­—ä½“æ ·å¼å’Œå¤§å°
+		contentPane.add(progressBar_3);// æŠŠä¸â€œ3:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JProgressBar progressBar_4 = new JProgressBar();// Óë¡°4:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ
-		progressBar_4.setBounds(94, 220, 321, 32);// ÉèÖÃÓë¡°4:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß
-		progressBar_4.setForeground(new Color(255, 165, 0));// ÉèÖÃÓë¡°4:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÖĞµÄÇ°¾°É«
-		progressBar_4.setStringPainted(true);// ÉèÖÃÓë¡°4:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ³ÊÏÖ½ø¶È×Ö·û´®
-		progressBar_4.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));// ÉèÖÃÓë¡°4:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄ×ÖÌåÑùÊ½ºÍ´óĞ¡
-		contentPane.add(progressBar_4);// °ÑÓë¡°4:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		JProgressBar progressBar_4 = new JProgressBar();// ä¸â€œ4:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡
+		progressBar_4.setBounds(94, 220, 321, 32);// è®¾ç½®ä¸â€œ4:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜
+		progressBar_4.setForeground(new Color(255, 165, 0));// è®¾ç½®ä¸â€œ4:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ä¸­çš„å‰æ™¯è‰²
+		progressBar_4.setStringPainted(true);// è®¾ç½®ä¸â€œ4:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡å‘ˆç°è¿›åº¦å­—ç¬¦ä¸²
+		progressBar_4.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));// è®¾ç½®ä¸â€œ4:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„å­—ä½“æ ·å¼å’Œå¤§å°
+		contentPane.add(progressBar_4);// æŠŠä¸â€œ4:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JProgressBar progressBar_5 = new JProgressBar();// Óë¡°5:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ
-		progressBar_5.setBounds(94, 268, 321, 32);// ÉèÖÃÓë¡°5:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß
-		progressBar_5.setForeground(new Color(255, 165, 0));// ÉèÖÃÓë¡°5:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÖĞµÄÇ°¾°É«
-		progressBar_5.setStringPainted(true);// ÉèÖÃÓë¡°5:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ³ÊÏÖ½ø¶È×Ö·û´®
-		progressBar_5.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));// ÉèÖÃÓë¡°5:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄ×ÖÌåÑùÊ½ºÍ´óĞ¡
-		contentPane.add(progressBar_5);// °ÑÓë¡°5:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		JProgressBar progressBar_5 = new JProgressBar();// ä¸â€œ5:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡
+		progressBar_5.setBounds(94, 268, 321, 32);// è®¾ç½®ä¸â€œ5:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜
+		progressBar_5.setForeground(new Color(255, 165, 0));// è®¾ç½®ä¸â€œ5:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ä¸­çš„å‰æ™¯è‰²
+		progressBar_5.setStringPainted(true);// è®¾ç½®ä¸â€œ5:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡å‘ˆç°è¿›åº¦å­—ç¬¦ä¸²
+		progressBar_5.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));// è®¾ç½®ä¸â€œ5:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„å­—ä½“æ ·å¼å’Œå¤§å°
+		contentPane.add(progressBar_5);// æŠŠä¸â€œ5:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JProgressBar progressBar_6 = new JProgressBar();// Óë¡°6:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ
-		progressBar_6.setBounds(94, 313, 321, 32);// ÉèÖÃÓë¡°6:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß
-		progressBar_6.setForeground(new Color(255, 165, 0));// ÉèÖÃÓë¡°6:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÖĞµÄÇ°¾°É«
-		progressBar_6.setStringPainted(true);// ÉèÖÃÓë¡°6:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ³ÊÏÖ½ø¶È×Ö·û´®
-		progressBar_6.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));// ÉèÖÃÓë¡°6:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄ×ÖÌåÑùÊ½ºÍ´óĞ¡
-		contentPane.add(progressBar_6);// °ÑÓë¡°6:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		JProgressBar progressBar_6 = new JProgressBar();// ä¸â€œ6:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡
+		progressBar_6.setBounds(94, 313, 321, 32);// è®¾ç½®ä¸â€œ6:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜
+		progressBar_6.setForeground(new Color(255, 165, 0));// è®¾ç½®ä¸â€œ6:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ä¸­çš„å‰æ™¯è‰²
+		progressBar_6.setStringPainted(true);// è®¾ç½®ä¸â€œ6:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡å‘ˆç°è¿›åº¦å­—ç¬¦ä¸²
+		progressBar_6.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));// è®¾ç½®ä¸â€œ6:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„å­—ä½“æ ·å¼å’Œå¤§å°
+		contentPane.add(progressBar_6);// æŠŠä¸â€œ6:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JProgressBar progressBar_7 = new JProgressBar();// Óë¡°7:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ
-		progressBar_7.setBounds(94, 358, 321, 32);// ÉèÖÃÓë¡°7:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß
-		progressBar_7.setForeground(new Color(255, 165, 0));// ÉèÖÃÓë¡°7:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÖĞµÄÇ°¾°É«
-		progressBar_7.setStringPainted(true);// ÉèÖÃÓë¡°7:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ³ÊÏÖ½ø¶È×Ö·û´®
-		progressBar_7.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));// ÉèÖÃÓë¡°7:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄ×ÖÌåÑùÊ½ºÍ´óĞ¡
-		contentPane.add(progressBar_7);// °ÑÓë¡°7:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		JProgressBar progressBar_7 = new JProgressBar();// ä¸â€œ7:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡
+		progressBar_7.setBounds(94, 358, 321, 32);// è®¾ç½®ä¸â€œ7:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜
+		progressBar_7.setForeground(new Color(255, 165, 0));// è®¾ç½®ä¸â€œ7:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ä¸­çš„å‰æ™¯è‰²
+		progressBar_7.setStringPainted(true);// è®¾ç½®ä¸â€œ7:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡å‘ˆç°è¿›åº¦å­—ç¬¦ä¸²
+		progressBar_7.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));// è®¾ç½®ä¸â€œ7:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„å­—ä½“æ ·å¼å’Œå¤§å°
+		contentPane.add(progressBar_7);// æŠŠä¸â€œ7:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JProgressBar progressBar_8 = new JProgressBar();// Óë¡°8:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ
-		progressBar_8.setBounds(94, 403, 321, 32);// ÉèÖÃÓë¡°8:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß
-		progressBar_8.setForeground(new Color(255, 165, 0));// ÉèÖÃÓë¡°8:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÖĞµÄÇ°¾°É«
-		progressBar_8.setStringPainted(true);// ÉèÖÃÓë¡°8:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ³ÊÏÖ½ø¶È×Ö·û´®
-		progressBar_8.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));// ÉèÖÃÓë¡°8:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄ×ÖÌåÑùÊ½ºÍ´óĞ¡
-		contentPane.add(progressBar_8);// °ÑÓë¡°8:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		JProgressBar progressBar_8 = new JProgressBar();// ä¸â€œ8:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡
+		progressBar_8.setBounds(94, 403, 321, 32);// è®¾ç½®ä¸â€œ8:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜
+		progressBar_8.setForeground(new Color(255, 165, 0));// è®¾ç½®ä¸â€œ8:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ä¸­çš„å‰æ™¯è‰²
+		progressBar_8.setStringPainted(true);// è®¾ç½®ä¸â€œ8:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡å‘ˆç°è¿›åº¦å­—ç¬¦ä¸²
+		progressBar_8.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));// è®¾ç½®ä¸â€œ8:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„å­—ä½“æ ·å¼å’Œå¤§å°
+		contentPane.add(progressBar_8);// æŠŠä¸â€œ8:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JProgressBar progressBar_9 = new JProgressBar();// Óë¡°9:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ
-		progressBar_9.setBounds(94, 448, 321, 32);// ÉèÖÃÓë¡°9:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄÎ»ÖÃºÍ¿í¸ß
-		progressBar_9.setForeground(new Color(255, 165, 0));// ÉèÖÃÓë¡°9:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÖĞµÄÇ°¾°É«
-		progressBar_9.setStringPainted(true);// ÉèÖÃÓë¡°9:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõ³ÊÏÖ½ø¶È×Ö·û´®
-		progressBar_9.setFont(new Font("Î¢ÈíÑÅºÚ", Font.PLAIN, 14));// ÉèÖÃÓë¡°9:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõµÄ×ÖÌåÑùÊ½ºÍ´óĞ¡
-		contentPane.add(progressBar_9);// °ÑÓë¡°9:¡±±êÇ©¶ÔÓ¦µÄ½ø¶ÈÌõÌí¼Óµ½±³¾°Ãæ°åÖĞ
+		JProgressBar progressBar_9 = new JProgressBar();// ä¸â€œ9:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡
+		progressBar_9.setBounds(94, 448, 321, 32);// è®¾ç½®ä¸â€œ9:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„ä½ç½®å’Œå®½é«˜
+		progressBar_9.setForeground(new Color(255, 165, 0));// è®¾ç½®ä¸â€œ9:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡ä¸­çš„å‰æ™¯è‰²
+		progressBar_9.setStringPainted(true);// è®¾ç½®ä¸â€œ9:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡å‘ˆç°è¿›åº¦å­—ç¬¦ä¸²
+		progressBar_9.setFont(new Font("å¾®è½¯é›…é»‘", Font.PLAIN, 14));// è®¾ç½®ä¸â€œ9:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡çš„å­—ä½“æ ·å¼å’Œå¤§å°
+		contentPane.add(progressBar_9);// æŠŠä¸â€œ9:â€æ ‡ç­¾å¯¹åº”çš„è¿›åº¦æ¡æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 		
-		JButton button = new JButton();// °´Å¥
+		JButton button = new JButton();// æŒ‰é’®
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				do_button_actionPerformed(e);// Îª°´Å¥Ìí¼Ó¶¯×÷ÊÂ¼şµÄ¼àÌı
+				do_button_actionPerformed(e);// ä¸ºæŒ‰é’®æ·»åŠ åŠ¨ä½œäº‹ä»¶çš„ç›‘å¬
 			}
 		});
-		button.setBounds(94, 485, 321, 32);// ÉèÖÃ°´Å¥µÄÎ»ÖÃºÍ¿í¸ß
-		button.setText("²é¿´×î½ü10ÆÚµÄµÚÒ»Î»¿ª½±ºÅÂë×ßÊÆÍ¼");// ÉèÖÃ°´Å¥ÖĞµÄÎÄ±¾ÄÚÈİ
-		button.setFont(new Font("Ó×Ô²", Font.PLAIN, 16));// ÉèÖÃ°´Å¥ÖĞµÄ×ÖÌåÑùÊ½ºÍ´óĞ¡
-		button.setForeground(new Color(0, 102, 153));// ÉèÖÃ°´Å¥µÄÇ°¾°É«
-		contentPane.add(button);// °Ñ°´Å¥Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		button.setBounds(94, 485, 321, 32);// è®¾ç½®æŒ‰é’®çš„ä½ç½®å’Œå®½é«˜
+		button.setText("æŸ¥çœ‹æœ€è¿‘10æœŸçš„ç¬¬ä¸€ä½å¼€å¥–å·ç èµ°åŠ¿å›¾");// è®¾ç½®æŒ‰é’®ä¸­çš„æ–‡æœ¬å†…å®¹
+		button.setFont(new Font("å¹¼åœ†", Font.PLAIN, 16));// è®¾ç½®æŒ‰é’®ä¸­çš„å­—ä½“æ ·å¼å’Œå¤§å°
+		button.setForeground(new Color(0, 102, 153));// è®¾ç½®æŒ‰é’®çš„å‰æ™¯è‰²
+		contentPane.add(button);// æŠŠæŒ‰é’®æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel l_0 = new JLabel("");// Í³¼Æ0³öÏÖµÄ´ÎÊı±êÇ©
-		l_0.setBounds(439, 49, 104, 18);// ÉèÖÃÍ³¼Æ0³öÏÖµÄ´ÎÊı±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(l_0);// °ÑÍ³¼Æ0³öÏÖµÄ´ÎÊı±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel l_0 = new JLabel("");// ç»Ÿè®¡0å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾
+		l_0.setBounds(439, 49, 104, 18);// è®¾ç½®ç»Ÿè®¡0å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(l_0);// æŠŠç»Ÿè®¡0å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel l_1 = new JLabel("");// Í³¼Æ1³öÏÖµÄ´ÎÊı±êÇ©
-		l_1.setBounds(439, 91, 104, 18);// ÉèÖÃÍ³¼Æ1³öÏÖµÄ´ÎÊı±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(l_1);// °ÑÍ³¼Æ1³öÏÖµÄ´ÎÊı±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel l_1 = new JLabel("");// ç»Ÿè®¡1å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾
+		l_1.setBounds(439, 91, 104, 18);// è®¾ç½®ç»Ÿè®¡1å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(l_1);// æŠŠç»Ÿè®¡1å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel l_2 = new JLabel("");// Í³¼Æ2³öÏÖµÄ´ÎÊı±êÇ©
-		l_2.setBounds(439, 136, 104, 18);// ÉèÖÃÍ³¼Æ2³öÏÖµÄ´ÎÊı±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(l_2);// °ÑÍ³¼Æ2³öÏÖµÄ´ÎÊı±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel l_2 = new JLabel("");// ç»Ÿè®¡2å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾
+		l_2.setBounds(439, 136, 104, 18);// è®¾ç½®ç»Ÿè®¡2å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(l_2);// æŠŠç»Ÿè®¡2å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel l_3 = new JLabel("");// Í³¼Æ3³öÏÖµÄ´ÎÊı±êÇ©
-		l_3.setBounds(439, 181, 104, 18);// ÉèÖÃÍ³¼Æ3³öÏÖµÄ´ÎÊı±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(l_3);// °ÑÍ³¼Æ3³öÏÖµÄ´ÎÊı±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel l_3 = new JLabel("");// ç»Ÿè®¡3å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾
+		l_3.setBounds(439, 181, 104, 18);// è®¾ç½®ç»Ÿè®¡3å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(l_3);// æŠŠç»Ÿè®¡3å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel l_4 = new JLabel("");// Í³¼Æ4³öÏÖµÄ´ÎÊı±êÇ©
-		l_4.setBounds(439, 226, 104, 18);// ÉèÖÃÍ³¼Æ4³öÏÖµÄ´ÎÊı±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(l_4);// °ÑÍ³¼Æ4³öÏÖµÄ´ÎÊı±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel l_4 = new JLabel("");// ç»Ÿè®¡4å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾
+		l_4.setBounds(439, 226, 104, 18);// è®¾ç½®ç»Ÿè®¡4å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(l_4);// æŠŠç»Ÿè®¡4å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel l_5 = new JLabel("");// Í³¼Æ5³öÏÖµÄ´ÎÊı±êÇ©
-		l_5.setBounds(439, 274, 104, 18);// ÉèÖÃÍ³¼Æ5³öÏÖµÄ´ÎÊı±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(l_5);// °ÑÍ³¼Æ5³öÏÖµÄ´ÎÊı±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel l_5 = new JLabel("");// ç»Ÿè®¡5å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾
+		l_5.setBounds(439, 274, 104, 18);// è®¾ç½®ç»Ÿè®¡5å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(l_5);// æŠŠç»Ÿè®¡5å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel l_6 = new JLabel("");// Í³¼Æ6³öÏÖµÄ´ÎÊı±êÇ©
-		l_6.setBounds(439, 319, 104, 18);// ÉèÖÃÍ³¼Æ6³öÏÖµÄ´ÎÊı±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(l_6);// °ÑÍ³¼Æ6³öÏÖµÄ´ÎÊı±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel l_6 = new JLabel("");// ç»Ÿè®¡6å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾
+		l_6.setBounds(439, 319, 104, 18);// è®¾ç½®ç»Ÿè®¡6å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(l_6);// æŠŠç»Ÿè®¡6å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel l_7 = new JLabel("");// Í³¼Æ7³öÏÖµÄ´ÎÊı±êÇ©
-		l_7.setBounds(439, 364, 104, 18);// ÉèÖÃÍ³¼Æ7³öÏÖµÄ´ÎÊı±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(l_7);// °ÑÍ³¼Æ7³öÏÖµÄ´ÎÊı±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel l_7 = new JLabel("");// ç»Ÿè®¡7å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾
+		l_7.setBounds(439, 364, 104, 18);// è®¾ç½®ç»Ÿè®¡7å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(l_7);// æŠŠç»Ÿè®¡7å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel l_8 = new JLabel("");// Í³¼Æ8³öÏÖµÄ´ÎÊı±êÇ©
-		l_8.setBounds(439, 409, 104, 18);// ÉèÖÃÍ³¼Æ8³öÏÖµÄ´ÎÊı±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(l_8);// °ÑÍ³¼Æ8³öÏÖµÄ´ÎÊı±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel l_8 = new JLabel("");// ç»Ÿè®¡8å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾
+		l_8.setBounds(439, 409, 104, 18);// è®¾ç½®ç»Ÿè®¡8å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(l_8);// æŠŠç»Ÿè®¡8å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		JLabel l_9 = new JLabel("");// Í³¼Æ9³öÏÖµÄ´ÎÊı±êÇ©
-		l_9.setBounds(439, 454, 104, 18);// ÉèÖÃÍ³¼Æ9³öÏÖµÄ´ÎÊı±êÇ©µÄÎ»ÖÃºÍ¿í¸ß
-		contentPane.add(l_9);// °ÑÍ³¼Æ9³öÏÖµÄ´ÎÊı±êÇ©Ìí¼Óµ½±³¾°Ãæ°åÖĞ
+		JLabel l_9 = new JLabel("");// ç»Ÿè®¡9å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾
+		l_9.setBounds(439, 454, 104, 18);// è®¾ç½®ç»Ÿè®¡9å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾çš„ä½ç½®å’Œå®½é«˜
+		contentPane.add(l_9);// æŠŠç»Ÿè®¡9å‡ºç°çš„æ¬¡æ•°æ ‡ç­¾æ·»åŠ åˆ°èƒŒæ™¯é¢æ¿ä¸­
 
-		ConnMySQL con = new ConnMySQL();// Á¬½ÓMySQLÊı¾İ¿â
+		ConnMySQL con = new ConnMySQL();// è¿æ¥MySQLæ•°æ®åº“
 
-		String ab = "a";// µÚÒ»Î»¿ª½±ºÅÂë
+		String ab = "a";// ç¬¬ä¸€ä½å¼€å¥–å·ç 
 
-		int i0 = con.getABC(ab, 0);// »ñµÃµÚÒ»Î»¿ª½±ºÅÂë0³öÏÖµÄ´ÎÊı
-		con.closeConnection();// ¹Ø±ÕÊı¾İ¿âÁ¬½Ó
-		int i1 = con.getABC(ab, 1);// »ñµÃµÚÒ»Î»¿ª½±ºÅÂë1³öÏÖµÄ´ÎÊı
-		con.closeConnection();// ¹Ø±ÕÊı¾İ¿âÁ¬½Ó
-		int i2 = con.getABC(ab, 2);// »ñµÃµÚÒ»Î»¿ª½±ºÅÂë2³öÏÖµÄ´ÎÊı
-		con.closeConnection();// ¹Ø±ÕÊı¾İ¿âÁ¬½Ó
-		int i3 = con.getABC(ab, 3);// »ñµÃµÚÒ»Î»¿ª½±ºÅÂë3³öÏÖµÄ´ÎÊı
-		con.closeConnection();// ¹Ø±ÕÊı¾İ¿âÁ¬½Ó
-		int i4 = con.getABC(ab, 4);// »ñµÃµÚÒ»Î»¿ª½±ºÅÂë4³öÏÖµÄ´ÎÊı
-		con.closeConnection();// ¹Ø±ÕÊı¾İ¿âÁ¬½Ó
-		int i5 = con.getABC(ab, 5);// »ñµÃµÚÒ»Î»¿ª½±ºÅÂë5³öÏÖµÄ´ÎÊı
-		con.closeConnection();// ¹Ø±ÕÊı¾İ¿âÁ¬½Ó
-		int i6 = con.getABC(ab, 6);// »ñµÃµÚÒ»Î»¿ª½±ºÅÂë6³öÏÖµÄ´ÎÊı
-		con.closeConnection();// ¹Ø±ÕÊı¾İ¿âÁ¬½Ó
-		int i7 = con.getABC(ab, 7);// »ñµÃµÚÒ»Î»¿ª½±ºÅÂë7³öÏÖµÄ´ÎÊı
-		con.closeConnection();// ¹Ø±ÕÊı¾İ¿âÁ¬½Ó
-		int i8 = con.getABC(ab, 8);// »ñµÃµÚÒ»Î»¿ª½±ºÅÂë8³öÏÖµÄ´ÎÊı
-		con.closeConnection();// ¹Ø±ÕÊı¾İ¿âÁ¬½Ó
-		int i9 = con.getABC(ab, 9);// »ñµÃµÚÒ»Î»¿ª½±ºÅÂë9³öÏÖµÄ´ÎÊı
-		con.closeConnection();// ¹Ø±ÕÊı¾İ¿âÁ¬½Ó
-		double all = i0 + i1 + i2 + i3 + i4 + i5 + i6 + i7 + i8 + i9;// »ñµÃ¿ª½±´ÎÊı
-		// ÉèÖÃÍ³¼Æ¿ª½±ºÅÂë³öÏÖ´ÎÊı±êÇ©ÖĞµÄÎÄ±¾ÄÚÈİ
-		l_0.setText("³öÏÖ " + i0 + " ´Î");
-		l_1.setText("³öÏÖ " + i1 + " ´Î");
-		l_2.setText("³öÏÖ " + i2 + " ´Î");
-		l_3.setText("³öÏÖ " + i3 + " ´Î");
-		l_4.setText("³öÏÖ " + i4 + " ´Î");
-		l_5.setText("³öÏÖ " + i5 + " ´Î");
-		l_6.setText("³öÏÖ " + i6 + " ´Î");
-		l_7.setText("³öÏÖ " + i7 + " ´Î");
-		l_8.setText("³öÏÖ " + i8 + " ´Î");
-		l_9.setText("³öÏÖ " + i9 + " ´Î");
+		int i0 = con.getABC(ab, 0);// è·å¾—ç¬¬ä¸€ä½å¼€å¥–å·ç 0å‡ºç°çš„æ¬¡æ•°
+		con.closeConnection();// å…³é—­æ•°æ®åº“è¿æ¥
+		int i1 = con.getABC(ab, 1);// è·å¾—ç¬¬ä¸€ä½å¼€å¥–å·ç 1å‡ºç°çš„æ¬¡æ•°
+		con.closeConnection();// å…³é—­æ•°æ®åº“è¿æ¥
+		int i2 = con.getABC(ab, 2);// è·å¾—ç¬¬ä¸€ä½å¼€å¥–å·ç 2å‡ºç°çš„æ¬¡æ•°
+		con.closeConnection();// å…³é—­æ•°æ®åº“è¿æ¥
+		int i3 = con.getABC(ab, 3);// è·å¾—ç¬¬ä¸€ä½å¼€å¥–å·ç 3å‡ºç°çš„æ¬¡æ•°
+		con.closeConnection();// å…³é—­æ•°æ®åº“è¿æ¥
+		int i4 = con.getABC(ab, 4);// è·å¾—ç¬¬ä¸€ä½å¼€å¥–å·ç 4å‡ºç°çš„æ¬¡æ•°
+		con.closeConnection();// å…³é—­æ•°æ®åº“è¿æ¥
+		int i5 = con.getABC(ab, 5);// è·å¾—ç¬¬ä¸€ä½å¼€å¥–å·ç 5å‡ºç°çš„æ¬¡æ•°
+		con.closeConnection();// å…³é—­æ•°æ®åº“è¿æ¥
+		int i6 = con.getABC(ab, 6);// è·å¾—ç¬¬ä¸€ä½å¼€å¥–å·ç 6å‡ºç°çš„æ¬¡æ•°
+		con.closeConnection();// å…³é—­æ•°æ®åº“è¿æ¥
+		int i7 = con.getABC(ab, 7);// è·å¾—ç¬¬ä¸€ä½å¼€å¥–å·ç 7å‡ºç°çš„æ¬¡æ•°
+		con.closeConnection();// å…³é—­æ•°æ®åº“è¿æ¥
+		int i8 = con.getABC(ab, 8);// è·å¾—ç¬¬ä¸€ä½å¼€å¥–å·ç 8å‡ºç°çš„æ¬¡æ•°
+		con.closeConnection();// å…³é—­æ•°æ®åº“è¿æ¥
+		int i9 = con.getABC(ab, 9);// è·å¾—ç¬¬ä¸€ä½å¼€å¥–å·ç 9å‡ºç°çš„æ¬¡æ•°
+		con.closeConnection();// å…³é—­æ•°æ®åº“è¿æ¥
+		double all = i0 + i1 + i2 + i3 + i4 + i5 + i6 + i7 + i8 + i9;// è·å¾—å¼€å¥–æ¬¡æ•°
+		// è®¾ç½®ç»Ÿè®¡å¼€å¥–å·ç å‡ºç°æ¬¡æ•°æ ‡ç­¾ä¸­çš„æ–‡æœ¬å†…å®¹
+		l_0.setText("å‡ºç° " + i0 + " æ¬¡");
+		l_1.setText("å‡ºç° " + i1 + " æ¬¡");
+		l_2.setText("å‡ºç° " + i2 + " æ¬¡");
+		l_3.setText("å‡ºç° " + i3 + " æ¬¡");
+		l_4.setText("å‡ºç° " + i4 + " æ¬¡");
+		l_5.setText("å‡ºç° " + i5 + " æ¬¡");
+		l_6.setText("å‡ºç° " + i6 + " æ¬¡");
+		l_7.setText("å‡ºç° " + i7 + " æ¬¡");
+		l_8.setText("å‡ºç° " + i8 + " æ¬¡");
+		l_9.setText("å‡ºç° " + i9 + " æ¬¡");
 
-		DecimalFormat df = new DecimalFormat(".###");// ¸ñÊ½»¯£¨±£ÁôÈıÎ»ÓĞĞ§Êı×Ö£©
-		// ÉèÖÃ±»¸ñÊ½»¯µÄ½ø¶È×Ö·û´®µÄÖµ£¬²¢ÉèÖÃ½øÍ¼Ìõµ±Ç°Öµ
+		DecimalFormat df = new DecimalFormat(".###");// æ ¼å¼åŒ–ï¼ˆä¿ç•™ä¸‰ä½æœ‰æ•ˆæ•°å­—ï¼‰
+		// è®¾ç½®è¢«æ ¼å¼åŒ–çš„è¿›åº¦å­—ç¬¦ä¸²çš„å€¼ï¼Œå¹¶è®¾ç½®è¿›å›¾æ¡å½“å‰å€¼
 		progressBar_0.setString(df.format(i0 * 100 / all) + "%");
 		progressBar_0.setValue(i0);
 		progressBar_1.setString(df.format(i1 * 100 / all) + "%");
@@ -259,11 +259,11 @@ public class Apanel extends JPanel {// µÚÒ»Î»¿ª½±ºÅÂë×ßÊÆÃæ°å
 
 	}
 
-	protected void do_button_actionPerformed(ActionEvent e) {// ¡°²é¿´×î½ü10ÆÚµÄµÚÒ»Î»¿ª½±ºÅÂë×ßÊÆÍ¼¡±¶¯×÷ÊÂ¼şµÄ¼àÌı
-		ALineChart chart = new ALineChart(null, "µÚÒ»Î»¿ª½±ºÅÂë×ßÊÆÍ¼");// ´´½¨¡°µÚÒ»Î»¿ª½±ºÅÂë×ßÊÆÍ¼¡±ÕÛÏßÍ¼´°Ìå¶ÔÏó
-		chart.pack();// µ÷Õû´°¿ÚµÄ´óĞ¡£¬ÒÔÊÊÓ¦ÕÛÏßÍ¼¶ÔÏóµÄÊ×Ñ¡´óĞ¡ºÍ²¼¾Ö
-		RefineryUtilities.centerFrameOnScreen(chart);// ½«ÕÛÏßÍ¼¶ÔÏóÖÃÓÚÆÁÄ»ÖĞ¼ä
-		chart.setVisible(true);// ÉèÖÃÕÛÏßÍ¼´°Ìå¶ÔÏó¿É¼û
+	protected void do_button_actionPerformed(ActionEvent e) {// â€œæŸ¥çœ‹æœ€è¿‘10æœŸçš„ç¬¬ä¸€ä½å¼€å¥–å·ç èµ°åŠ¿å›¾â€åŠ¨ä½œäº‹ä»¶çš„ç›‘å¬
+		ALineChart chart = new ALineChart(null, "ç¬¬ä¸€ä½å¼€å¥–å·ç èµ°åŠ¿å›¾");// åˆ›å»ºâ€œç¬¬ä¸€ä½å¼€å¥–å·ç èµ°åŠ¿å›¾â€æŠ˜çº¿å›¾çª—ä½“å¯¹è±¡
+		chart.pack();// è°ƒæ•´çª—å£çš„å¤§å°ï¼Œä»¥é€‚åº”æŠ˜çº¿å›¾å¯¹è±¡çš„é¦–é€‰å¤§å°å’Œå¸ƒå±€
+		RefineryUtilities.centerFrameOnScreen(chart);// å°†æŠ˜çº¿å›¾å¯¹è±¡ç½®äºå±å¹•ä¸­é—´
+		chart.setVisible(true);// è®¾ç½®æŠ˜çº¿å›¾çª—ä½“å¯¹è±¡å¯è§
 	}
 	
 }
