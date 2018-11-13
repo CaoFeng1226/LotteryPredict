@@ -23,72 +23,72 @@ import com.db.ConnMySQL;
 /*    */ import org.jfree.chart.title.TextTitle;
 /*    */ import org.jfree.data.category.DefaultCategoryDataset;
 /*    */ import org.jfree.ui.TextAnchor;
-/*    */ 
-/*    */ public class ALineChart extends JFrame
-/*    */ {
-/*    */   public ALineChart(String applicationTitle, String chartTitle)
-/*    */   {
-/* 36 */     super(applicationTitle);
-/* 37 */     setResizable(false);
-/* 38 */     setIconImage(Toolkit.getDefaultToolkit().getImage(SparBuoy.class.getResource("/imgs/log.png")));
-/* 39 */     JFreeChart lineChart = ChartFactory.createLineChart(
-/* 40 */       chartTitle, 
-/* 41 */       "开奖期数", 
-/* 42 */       "第一位开奖号码", 
-/* 43 */       createDataset(), 
-/* 44 */       PlotOrientation.VERTICAL, 
-/* 45 */       true, 
-/* 46 */       true, 
-/* 47 */       false);
-/* 48 */     ChartPanel chartPanel = new ChartPanel(lineChart);
-/* 49 */     chartPanel.setPreferredSize(new Dimension(850, 300));
-/* 50 */     setContentPane(chartPanel);
-/*    */ 
-/* 52 */     TextTitle textTitle = lineChart.getTitle();
-/* 53 */     textTitle.setFont(new Font("黑体", 0, 20));
-/*    */ 
-/* 55 */     LegendTitle legendTitle = lineChart.getLegend();
-/* 56 */     if (legendTitle != null) {
-/* 57 */       legendTitle.setItemFont(new Font("黑体", 0, 12));
-/*    */     }
-/*    */ 
-/* 60 */     CategoryPlot plot = (CategoryPlot)lineChart.getPlot();
-/*    */ 
-/* 62 */     CategoryAxis xAxis = plot.getDomainAxis();
-/* 63 */     xAxis.setLabelFont(new Font("黑体", 0, 12));
-/* 64 */     xAxis.setTickLabelFont(new Font("黑体", 0, 12));
-/*    */ 
-/* 66 */     ValueAxis yAxis = plot.getRangeAxis();
-/* 67 */     yAxis.setLabelFont(new Font("黑体", 0, 12));
-/* 68 */     yAxis.setTickLabelFont(new Font("黑体", 0, 12));
-/*    */ 
-/* 70 */     LineAndShapeRenderer renderer = (LineAndShapeRenderer)plot.getRenderer();
-/* 71 */     renderer.setBaseShapesVisible(true);
-/* 72 */     renderer.setBaseShapesFilled(true);
-/* 73 */     renderer.setBaseItemLabelsVisible(true);
-/* 74 */     renderer.setBasePositiveItemLabelPosition(
-/* 75 */       new ItemLabelPosition(ItemLabelAnchor.OUTSIDE2, TextAnchor.BASELINE_CENTER));
-/* 76 */     renderer.setBaseItemLabelGenerator(new StandardCategoryItemLabelGenerator());
-/* 77 */     renderer.setBaseItemLabelFont(new Font("黑体", 0, 12));
-/*    */ 
-/* 79 */     setDefaultCloseOperation(2);
-/*    */   }
-/*    */ 
-/*    */   private DefaultCategoryDataset createDataset() {
-/* 83 */     ConnMySQL con = new ConnMySQL();
-/* 84 */     List list = ConnMySQL.getFirstTenData();
-/* 85 */     DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-/*    */ 
-/* 87 */     dataset.addValue(((History)list.get(0)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(0)).getNumber() + "期");
-/* 88 */     dataset.addValue(((History)list.get(1)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(1)).getNumber() + "期");
-/* 89 */     dataset.addValue(((History)list.get(2)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(2)).getNumber() + "期");
-/* 90 */     dataset.addValue(((History)list.get(3)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(3)).getNumber() + "期");
-/* 91 */     dataset.addValue(((History)list.get(4)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(4)).getNumber() + "期");
-/* 92 */     dataset.addValue(((History)list.get(5)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(5)).getNumber() + "期");
-/* 93 */     dataset.addValue(((History)list.get(6)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(6)).getNumber() + "期");
-/* 94 */     dataset.addValue(((History)list.get(7)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(7)).getNumber() + "期");
-/* 95 */     dataset.addValue(((History)list.get(8)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(8)).getNumber() + "期");
-/* 96 */     dataset.addValue(((History)list.get(9)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(9)).getNumber() + "期");
+ 
+ public class ALineChart extends JFrame
+ {
+   public ALineChart(String applicationTitle, String chartTitle)
+   {
+     super(applicationTitle);
+     setResizable(false);
+     setIconImage(Toolkit.getDefaultToolkit().getImage(SparBuoy.class.getResource("/imgs/log.png")));
+     JFreeChart lineChart = ChartFactory.createLineChart(
+       chartTitle, 
+       "开奖期数", 
+       "第一位开奖号码", 
+       createDataset(), 
+       PlotOrientation.VERTICAL, 
+       true, 
+       true, 
+       false);
+     ChartPanel chartPanel = new ChartPanel(lineChart);
+     chartPanel.setPreferredSize(new Dimension(850, 300));
+     setContentPane(chartPanel);
+ 
+     TextTitle textTitle = lineChart.getTitle();
+     textTitle.setFont(new Font("黑体", 0, 20));
+ 
+     LegendTitle legendTitle = lineChart.getLegend();
+     if (legendTitle != null) {
+       legendTitle.setItemFont(new Font("黑体", 0, 12));
+     }
+ 
+     CategoryPlot plot = (CategoryPlot)lineChart.getPlot();
+ 
+     CategoryAxis xAxis = plot.getDomainAxis();
+     xAxis.setLabelFont(new Font("黑体", 0, 12));
+     xAxis.setTickLabelFont(new Font("黑体", 0, 12));
+ 
+     ValueAxis yAxis = plot.getRangeAxis();
+     yAxis.setLabelFont(new Font("黑体", 0, 12));
+     yAxis.setTickLabelFont(new Font("黑体", 0, 12));
+ 
+     LineAndShapeRenderer renderer = (LineAndShapeRenderer)plot.getRenderer();
+     renderer.setBaseShapesVisible(true);
+     renderer.setBaseShapesFilled(true);
+     renderer.setBaseItemLabelsVisible(true);
+     renderer.setBasePositiveItemLabelPosition(
+       new ItemLabelPosition(ItemLabelAnchor.OUTSIDE2, TextAnchor.BASELINE_CENTER));
+     renderer.setBaseItemLabelGenerator(new StandardCategoryItemLabelGenerator());
+     renderer.setBaseItemLabelFont(new Font("黑体", 0, 12));
+ 
+     setDefaultCloseOperation(2);
+   }
+ 
+   private DefaultCategoryDataset createDataset() {
+     ConnMySQL con = new ConnMySQL();
+     List list = ConnMySQL.getFirstTenData();
+     DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+ 
+     dataset.addValue(((History)list.get(0)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(0)).getNumber() + "期");
+     dataset.addValue(((History)list.get(1)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(1)).getNumber() + "期");
+     dataset.addValue(((History)list.get(2)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(2)).getNumber() + "期");
+     dataset.addValue(((History)list.get(3)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(3)).getNumber() + "期");
+     dataset.addValue(((History)list.get(4)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(4)).getNumber() + "期");
+     dataset.addValue(((History)list.get(5)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(5)).getNumber() + "期");
+     dataset.addValue(((History)list.get(6)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(6)).getNumber() + "期");
+     dataset.addValue(((History)list.get(7)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(7)).getNumber() + "期");
+     dataset.addValue(((History)list.get(8)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(8)).getNumber() + "期");
+     dataset.addValue(((History)list.get(9)).getA(), "第一位开奖号码走势线", "第" + ((History)list.get(9)).getNumber() + "期");
     return dataset;
   }
 }
